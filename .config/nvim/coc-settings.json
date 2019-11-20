@@ -1,0 +1,5 @@
+{
+	"rust-analyzer.raLspServerPath":
+	"/usr/bin/ra_lsp_server"
+}
+
