@@ -62,8 +62,15 @@ set ignorecase
 set smartcase
 set gdefault
 
+" Use wide tabs
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
+set noexpandtab
+
 " Escape with ctrl+k
 nnoremap <C-k> <Esc>
+inoremap <C-c> <Esc>
 
 " Open hotkeys
 map <C-p> :Files<CR>
@@ -72,10 +79,13 @@ nmap <leader>; :Buffers<CR>
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 
-
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-l> <right>
