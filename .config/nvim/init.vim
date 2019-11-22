@@ -22,6 +22,9 @@ Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 
+" Distraction free writing
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 set termguicolors
