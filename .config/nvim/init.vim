@@ -92,3 +92,11 @@ inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
+
+" Use system clipboard for yanks
+set clipboard=unnamed
+
+" Run Python and Rust
+noremap <F5> <ESC>:w<CR>:!python %<CR>
+noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
+
