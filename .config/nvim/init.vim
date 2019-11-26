@@ -4,6 +4,7 @@ call plug#begin()
 
 " ColorSchemes
 Plug 'sainnhe/edge'
+Plug 'wojciechkepka/tequila-sunrise.vim'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -24,12 +25,15 @@ Plug 'rust-lang/rust.vim'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
+Plug 'Chiel92/vim-autoformat'
+
 
 call plug#end()
 
 set termguicolors
 set background=dark
-colorscheme edge
+colorscheme tequila-sunrise
+"colorscheme edge
 syntax on
 
 " Autocomplete
@@ -71,6 +75,8 @@ set softtabstop=8
 set tabstop=8
 set noexpandtab
 
+set splitright
+
 " Escape with ctrl+k
 nnoremap <C-k> <Esc>
 inoremap <C-c> <Esc>
@@ -88,6 +94,7 @@ nnoremap <down> <nop>
 " inoremap <right> <nop>
 
 
+" Use Ctrl + hjkl in input mode for arrows
 inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
@@ -96,7 +103,10 @@ inoremap <C-l> <right>
 " Use system clipboard for yanks
 set clipboard=unnamed
 
-" Run Python and Rust
+" Coc keybindings
+nmap <F2> <Plug>(coc-diagnostic-next-error)
+nmap <F3> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
+
+" Run rust and python
 noremap <F5> <ESC>:w<CR>:!python %<CR>
 noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
-
