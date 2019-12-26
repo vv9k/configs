@@ -80,7 +80,8 @@ set shiftwidth=8
 set softtabstop=8
 set tabstop=8
 set noexpandtab
-
+" Display line number
+set nu
 set splitright
 
 " Escape with ctrl+k
@@ -107,12 +108,29 @@ inoremap <C-k> <up>
 inoremap <C-l> <right>
 
 " Use system clipboard for yanks
-set clipboard=unnamed
+if has('clipboard')
+    if has('unnamedplus')  " When possible use + register for copy-paste
+        set clipboard=unnamed,unnamedplus
+    else         " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+endif
+
+
+" Fold code
+set foldmethod=indent
+set foldnestmax=2
+set foldlevel=1
+
 
 " Coc keybindings
 nmap <F2> <Plug>(coc-diagnostic-next-error)
 nmap <F3> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
 
+" Delete trailing whitespace
+nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " Run rust and python
 noremap <F5> <ESC>:w<CR>:!python %<CR>
 noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
+
