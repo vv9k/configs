@@ -22,10 +22,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'plasticboy/vim-markdown'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
+
 
 
 call plug#end()
@@ -55,6 +58,9 @@ let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rust_clip_command = 'xclip -selection clipboard'
 let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/rust/src"
+
+"C#
+let g:OmniSharp_server_use_mono = 1
 
 " Better display for messages
 set cmdheight=2
