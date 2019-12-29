@@ -5,10 +5,15 @@ call plug#begin()
 " ColorSchemes
 Plug 'sainnhe/edge'
 Plug 'wojciechkepka/tequila-sunrise.vim'
+Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
+
+" Nerdtree
+Plug 'scrooloose/nerdtree'
 
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
@@ -35,9 +40,12 @@ call plug#end()
 
 set termguicolors
 set background=dark
-colorscheme tequila-sunrise
+"colorscheme tequila-sunrise
 "colorscheme edge
-syntax on
+colorscheme solarized8
+"colorscheme gruvbox
+syntax enable
+
 
 " Autocomplete
 function! s:check_back_space() abort
@@ -87,6 +95,16 @@ set splitright
 " Escape with ctrl+k
 nnoremap <C-k> <Esc>
 inoremap <C-c> <Esc>
+
+" Switch between tabs
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
+
+" Toggle nerdtree
+map <C-k> :NERDTreeToggle<CR>
 
 " Open hotkeys
 map <C-p> :Files<CR>
