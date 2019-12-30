@@ -2,6 +2,9 @@ set shell=/bin/bash
 
 call plug#begin()
 
+" Git
+Plug 'tpope/vim-fugitive'
+
 " ColorSchemes
 Plug 'sainnhe/edge'
 Plug 'wojciechkepka/tequila-sunrise.vim'
@@ -9,7 +12,8 @@ Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 
 " GUI enhancements
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
 
 " Nerdtree
@@ -38,13 +42,16 @@ Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
+
 set termguicolors
 set background=dark
+set t_Co=256
+syntax on
 "colorscheme tequila-sunrise
 "colorscheme edge
-colorscheme solarized8
 "colorscheme gruvbox
-syntax enable
+colorscheme solarized8_high
+
 
 
 " Autocomplete
@@ -69,6 +76,10 @@ let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/
 
 "C#
 let g:OmniSharp_server_use_mono = 1
+
+" Make airline use powerline fonts
+" remember to install powerline-fonts
+let g:airline_powerline_fonts = 1
 
 " Better display for messages
 set cmdheight=2
