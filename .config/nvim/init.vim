@@ -19,6 +19,8 @@ Plug 'machakann/vim-highlightedyank'
 " Nerdtree
 Plug 'scrooloose/nerdtree'
 
+Plug 'preservim/nerdcommenter'
+
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -45,6 +47,7 @@ call plug#end()
 
 set termguicolors
 set background=dark
+"set background=light
 set t_Co=256
 syntax on
 "colorscheme tequila-sunrise
@@ -153,11 +156,11 @@ set foldlevel=1
 
 
 " Coc keybindings
+nmap <F1> <Plug>(coc-diagnostic-prev-error)
 nmap <F2> <Plug>(coc-diagnostic-next-error)
-nmap <F3> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
+nmap <F3> <Plug>(coc-diagnostic-next)
+nmap <F4> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
 
-" Delete trailing whitespace
-nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " Run rust and python
 noremap <F5> <ESC>:w<CR>:!python %<CR>
