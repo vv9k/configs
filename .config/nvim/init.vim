@@ -166,3 +166,7 @@ nmap <F4> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
 noremap <F5> <ESC>:w<CR>:!python %<CR>
 noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
 
+" Toggle comments
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>
+
