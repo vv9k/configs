@@ -22,6 +22,9 @@ Plug 'scrooloose/nerdtree'
 " Comments
 Plug 'preservim/nerdcommenter'
 
+" File structure
+Plug 'majutsushi/tagbar'
+
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -163,6 +166,10 @@ nmap <F2> <Plug>(coc-diagnostic-next-error)
 nmap <F3> <Plug>(coc-diagnostic-next)
 nmap <F4> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
 
+" Toggle code navigation
+" remember to install rusty-tags with it
+" cargo install rusty-tags
+nmap <F8> :TagbarToggle<CR>
 
 " Run rust and python
 noremap <F5> <ESC>:w<CR>:!python %<CR>
