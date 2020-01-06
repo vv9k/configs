@@ -179,3 +179,9 @@ noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
 
+
+" Toggle fuzzy search current file ctags
+nmap <C-t> <ESC>:BTags<CR>
+
+" Toggle fuzzy search for current buffer
+nmap / <ESC>:BLines<CR>
