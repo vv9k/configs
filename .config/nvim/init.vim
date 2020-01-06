@@ -19,6 +19,7 @@ Plug 'machakann/vim-highlightedyank'
 " Nerdtree
 Plug 'scrooloose/nerdtree'
 
+" Comments
 Plug 'preservim/nerdcommenter'
 
 " Fuzzy finder
@@ -72,6 +73,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Rust
 let g:rustfmt_autosave = 1
+let g:rustfmt_options = '--edition 2018'
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rust_clip_command = 'xclip -selection clipboard'
