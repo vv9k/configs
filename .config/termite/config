@@ -1,0 +1,6 @@
+[options]
+font = Fira Code 10
+
+[colors]
+foreground = #eff0eb
+background = #002b36
