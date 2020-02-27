@@ -1,0 +1,329 @@
+;---------;
+; Top Bar ;
+;---------;
+[bar/top-bar]
+bottom = false
+monitor = DVI-D-0
+override-redirect = true
+wm-restack = i3
+;;;;;;;;;;;;;;;;;;;; DIMENSIONS ;;;;;;;;;;;;;;;;;;;;;;;
+width = 100%
+height = 25
+offset-x = 0% 
+offset-y = 0
+
+;;;;;;;;;;;;;;;;;;;; APPEARANCE ;;;;;;;;;;;;;;;;;;;;;;;
+background = #9D000000
+foreground = #F17F27
+radius = 10
+
+line-size = 1
+line-color = #F400AB
+
+border-size = 0
+
+padding = 4
+fixed-center = true
+module-margin = 2
+
+font-0 = Hack:size=11;2
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=11;2"
+font-3 = "Font Awesome 5 Brands:pixelsize=11;2"
+
+;;;;;;;;;;;;;;;;;;;; MODULE ADD ;;;;;;;;;;;;;;;;;;;;;;
+modules-left = disk proc ram 
+modules-center = bspwm
+modules-right = volume date-time 
+
+
+;----------------;
+;   BOTTOM BAR   ;
+;----------------;
+[bar/top-bar2]
+inherit = bar/top-bar	
+monitor = HDMI-0
+modules-left =
+modules-center = bspwm
+modules-right = date-time
+
+
+;--------------------;
+; MODULE DEFINITIONS ;
+;--------------------;
+
+[module/wifi]
+type = internal/network
+interface = wlp1s0
+interval = 0.5
+label-connected =  %essid%  %downspeed% |  %upspeed%
+label-disconnected =   No WiFi
+label-disconnected-foreground = #FF0000
+
+
+[module/disk]
+type = internal/fs
+mount-0 = /
+interval = 30
+label-mounted =  %free%
+
+
+[module/ram]
+type = internal/memory
+interval = 1
+format = <label> <ramp-used>
+label =  %gb_used%
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+ramp-used-foreground = #DDFF00
+ramp-used-7-foreground = #FF0000
+
+
+[module/proc]
+type = internal/cpu
+format = <label> <ramp-coreload>
+label =  %percentage%%
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+[module/music]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+password = 
+interval = 1
+format-online = <icon-prev> <toggle> <icon-next> <icon-repeat> <bar-progress> <label-song>
+label-song =  %title%
+label-offline =  mpd offline
+bar-progress-width = 2
+bar-progress-indicator = |
+bar-progress-fill = -
+bar-progress-empty = -
+label-song-maxlen = 30 
+icon-prev = 
+icon-play = 
+icon-pause= 
+icon-next = 
+icon-repeat = 
+
+
+[module/battery]
+type = internal/battery
+full-at = 100
+bettery = BAT0
+adapter = AC
+poll-interval = 1
+
+format-charging =  <label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <label-full>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full =  %percentage%%
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 =  
+label-full-foreground = #00BB00
+
+
+[module/menu]
+type = custom/menu
+expand-right = true
+label-open = 
+label-close = 
+
+; Main Menu
+menu-0-0 = 
+menu-0-0-exec = menu-open-1
+menu-0-1 = 
+menu-0-1-exec = menu-open-2
+menu-0-2 = 
+menu-0-2-exec = thunar
+menu-0-3 = 
+menu-0-3-exec = menu-open-3
+menu-0-4 =  
+menu-0-4-exec = menu-open-4
+menu-0-5 = 
+menu-0-5-exec = menu-open-5
+menu-0-6 = 
+menu-0-6-exec = menu-open-6
+
+; Power Menu
+menu-1-0 = 
+menu-1-0-exec = menu-open-0
+menu-1-1 = 
+menu-1-1-exec = reboot
+menu-1-2 = 
+menu-1-2-exec = shutdown now
+
+; Internet Menu
+menu-2-0 = 
+menu-2-0-exec = menu-open-0
+menu-2-1 = 
+menu-2-1-exec = firefox &
+menu-2-2 = 
+menu-2-2-exec = google-chrome &
+menu-2-3 = 
+menu-2-3-exec = brave &
+
+; Dev Menu
+menu-3-0 = 
+menu-3-0-exec = menu-open-0
+menu-3-1 = 
+menu-3-1-exec = atom &
+menu-3-2 = 
+menu-3-2-exec = idea &
+menu-3-3 = 
+menu-3-3-exec = pycharm &
+menu-3-4 = []
+menu-3-4-exec = brackets &
+menu-3-5 = 
+menu-3-5-exec = /opt/visual-studio-code/code &
+menu-3-6 = 
+menu-3-6-exec = android-studio &
+
+; Media Menu
+menu-4-0 = ⎈
+menu-4-0-exec = menu-open-0
+menu-4-1 = 
+menu-4-1-exec = vlc &
+menu-4-2 = 
+menu-4-2-exec = spotify &
+menu-4-3 = 
+menu-4-3-exec = ario &
+
+; Graphics Menu
+menu-5-0 = 
+menu-5-0-exec = menu-open-0
+menu-5-1 = 
+menu-5-1-exec = gimp &
+menu-5-2 = 
+menu-5-2-exec = polarr &
+
+
+; Education Menu
+menu-6-0 = 
+menu-6-0-exec = menu-open-0
+menu-6-1 = 
+menu-6-1-exec = kstars &
+menu-6-2 = 
+menu-6-2-exec = pymol &
+menu-6-3 = 
+menu-6-3-exec = kcalc &
+
+label-separator = :|:
+
+
+[module/brightness]
+type = internal/xbacklight
+enable-scroll = true
+format = <ramp> <label>
+label = %percentage%%
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-0-foreground = #FFFFFF
+ramp-1-foreground = #FFFF00
+ramp-2-foreground = #FFFFFF
+ramp-3-foreground = #FFFF00
+ramp-4-foreground = #FFFF00
+
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = true
+enable-click = true
+enable-scroll = true
+label-mode-padding = 3
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+
+label-focused =  %icon%
+label-focused-padding = 3 
+label-focused-foreground = #AFAFAF
+label-focused-underline = #F17F27
+label-unfocused = %icon%
+label-unfocused-padding = 3
+label-unfocused-foreground = #0063CF
+label-urgent = %icon%
+label-urgent-padding = 3
+label-urgent-foregound = #FF0000
+
+
+
+[module/volume]
+type = internal/pulseaudio
+use-ui-max = true
+interval = 1
+format-volume = <ramp-volume><label-volume>
+label-muted =  muted
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+
+[module/date-time]
+type = internal/date
+interval = 1
+date = %d-%m-%Y%
+time = %H:%M
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+format = <label>
+label =  %time% ||  %date%
+label-font = 3
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
+label-monitor = %name%
+enable-click = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+
+
+label-focused =  %name%
+label-focused-padding = 3 
+label-focused-foreground = #AFAFAF
+label-focused-underline = #F17F27
+label-unfocused = %name%
+label-unfocused-padding = 3
+label-unfocused-foreground = #0063CF
+label-urgent = %name%
+label-urgent-padding = 3
+label-urgent-foregound = #FF0000
