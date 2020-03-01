@@ -3,6 +3,7 @@ parse_git_branch() {
 }
 export PS1="\[\e[38;5;97;1m\]vv\[\e[m\]\[\e[m\] | \[\e[38;5;197m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;182;1m\]\n↳\[\e[m\]"
 export PATH="/home/wojtek/bin:/home/wojtek/.cargo/bin:$PATH"
+export EXA_COLORS="di=35;01:ur=38;5;204:gr=38;5;204:tr=38;5;204:uw=38;5;164:gw=38;5;164:tw=38;5;164:ux=38;5;201;01:ue=38;5;162:gx=38;5;162:tx=38;5;162:uu=35:da=38;5;97:sn=38;5;204;01:sb=38;5;204"
 
 # to make 256 colors work in tmux
 #termite
