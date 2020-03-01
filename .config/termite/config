@@ -1,6 +1,10 @@
 [options]
 font = Fira Code 10
+allow_bold = false
+clickable_url = true
+
 
 [colors]
 foreground = #eff0eb
-background = #002b36
+/*background = #002b36*/
+background = #1e1c31
