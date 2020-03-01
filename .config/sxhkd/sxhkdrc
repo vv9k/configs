@@ -12,7 +12,7 @@ super + s
 
 # Lockscreen
 ctrl + alt + l
-	i3lock -t -i $WALLPAPER
+	i3lock -t -i /home/wojtek/wallpapers/lilac.png
 
 # close app
 super + q
@@ -35,8 +35,8 @@ super + 3
 	bspc desktop -f ^3 && bspc desktop -f ^6
 
 ## send the window in the given direction
-super + {_,shift + , alt + }{Left,Down,Up,Right}
-	bspc node -{f,m,s} {west,south,north,east}
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,m} {west,south,north,east}
 
 ## toggle beetwen pseudo-tiled & tiled
 super + p
@@ -57,6 +57,9 @@ super + ctrl + {Left,Right,Up,Down}
 ## shrinking windows
 super + alt + {Left,Right,Up,Down}
 	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
+
+ctrl + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
 
 ## reload bspwm config
 super + shift + BackSpace
