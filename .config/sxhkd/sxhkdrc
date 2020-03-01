@@ -70,3 +70,15 @@ ctrl + alt + Left
 	bspc desktop -f prev.local
 ctrl + alt + Right
 	bspc desktop -f next.local
+
+## Audio controls
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+XF86Audio{RaiseVolume,LowerVolume}
+	pactl set-sink-volume 0 {+,-}5%
+XF86Audio{Play,Pause,Next,Prev}
+	playerctl {play,pause,next,previous}
+
+## Brightness buttons
+XF86MonBrightness{Up,Down}
+	xbacklight {-inc,-dec} 5
