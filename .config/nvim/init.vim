@@ -10,6 +10,8 @@ Plug 'sainnhe/edge'
 Plug 'wojciechkepka/tequila-sunrise.vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
+Plug 'arzg/vim-colors-xcode'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -39,6 +41,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'baskerville/vim-sxhkdrc'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
@@ -57,7 +60,9 @@ syntax on
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox
-colorscheme solarized8_high
+"colorscheme solarized8_high
+colorscheme challenger_deep
+"colorscheme xcodedark
 
 
 
@@ -107,6 +112,11 @@ set shiftwidth=8
 set softtabstop=8
 set tabstop=8
 set noexpandtab
+
+" Use short tabs for html and css
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2 expandtab
+
 " Display line number
 set nu
 set splitright
@@ -159,6 +169,8 @@ set foldmethod=indent
 set foldnestmax=2
 set foldlevel=1
 
+" Quick text divider in insert mode
+inoremap <F2> ################################################################################
 
 " Coc keybindings
 nmap <F1> <Plug>(coc-diagnostic-prev-error)
@@ -184,4 +196,4 @@ vmap <C-_> <leader>c<Space>
 nmap <C-t> <ESC>:BTags<CR>
 
 " Toggle fuzzy search for current buffer
-nmap / <ESC>:BLines<CR>
+nmap <C-l> <ESC>:BLines<CR>
