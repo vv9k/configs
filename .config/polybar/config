@@ -41,7 +41,6 @@ modules-right = volume date-time
 [bar/top-bar2]
 inherit = bar/top-bar	
 monitor = HDMI-0
-modules-left =
 modules-center = bspwm
 modules-right = date-time
 
@@ -71,7 +70,7 @@ label-mounted =  %free%
 type = internal/memory
 interval = 1
 format = <label> <ramp-used>
-label =  %gb_used%
+label =  %gb_used%/%gb_free%
 ramp-used-0 = ▁
 ramp-used-1 = ▂
 ramp-used-2 = ▃
