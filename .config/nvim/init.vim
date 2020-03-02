@@ -42,10 +42,13 @@ Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'baskerville/vim-sxhkdrc'
+Plug 'rodjek/vim-puppet'
+Plug 'pangloss/vim-javascript'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'tell-k/vim-autopep8'
 
 
 
@@ -78,6 +81,10 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " Use <c-space> to trigger completion.
 "inoremap <silent><expr> <c-space> coc#refresh()
+
+" Python autoformat
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
 
 " Rust
 let g:rustfmt_autosave = 1
@@ -112,6 +119,7 @@ set shiftwidth=8
 set softtabstop=8
 set tabstop=8
 set noexpandtab
+
 
 " Use short tabs for html and css
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab

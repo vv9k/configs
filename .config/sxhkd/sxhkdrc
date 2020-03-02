@@ -12,7 +12,7 @@ super + s
 
 # Lockscreen
 ctrl + alt + l
-	i3lock -t -i /home/wojtek/wallpapers/lilac.png
+	i3lock -t -i /home/wojtek/wallpapers/arch.png
 
 # close app
 super + q
