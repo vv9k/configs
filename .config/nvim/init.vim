@@ -1,7 +1,9 @@
 set shell=/bin/bash
 
-call plug#begin()
+"################################################################################
+"				PLUGINS
 
+call plug#begin()
 " Git
 Plug 'tpope/vim-fugitive'
 
@@ -46,17 +48,23 @@ Plug 'baskerville/vim-sxhkdrc'
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
-
-
-
 call plug#end()
 
+"################################################################################
+"				COLORSCHEME
 
-set termguicolors
+"truecolor
+if (has("termguicolors"))
+    set termguicolors
+endif
+set t_Co=256
+"Sometimes setting 'termguicolors' is not enough and one has to set the t_8f and t_8b options explicitly
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 "set background=light
-set t_Co=256
 syntax on
+
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox
@@ -64,7 +72,12 @@ syntax on
 colorscheme challenger_deep
 "colorscheme xcodedark
 
+" Make airline use powerline fonts
+" remember to install powerline-fonts
+let g:airline_powerline_fonts = 1
 
+"################################################################################
+"				CODE
 
 " Autocomplete
 function! s:check_back_space() abort
@@ -75,9 +88,6 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" Use <c-space> to trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
 
 " Rust
 let g:rustfmt_autosave = 1
@@ -90,9 +100,8 @@ let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/
 "C#
 let g:OmniSharp_server_use_mono = 1
 
-" Make airline use powerline fonts
-" remember to install powerline-fonts
-let g:airline_powerline_fonts = 1
+"################################################################################
+"				BASIC SETTINGS
 
 " Better display for messages
 set cmdheight=2
@@ -121,16 +130,28 @@ autocmd FileType css setlocal shiftwidth=2 softtabstop=2 expandtab
 set nu
 set splitright
 
-" Escape with ctrl+k
-nnoremap <C-k> <Esc>
-inoremap <C-c> <Esc>
+" Fold code
+set foldmethod=indent
+set foldnestmax=2
+set foldlevel=1
+
+" Use system clipboard for yanks
+if has('clipboard')
+    if has('unnamedplus')  " When possible use + register for copy-paste
+        set clipboard=unnamed,unnamedplus
+    else         " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+endif
+
+"################################################################################
+"				KEYBINDINGS
 
 " Switch between tabs
 map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
-
 
 " Toggle nerdtree
 map <C-k> :NERDTreeToggle<CR>
@@ -142,11 +163,8 @@ nmap <leader>; :Buffers<CR>
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
 " Use Ctrl + hjkl in input mode for arrows
 inoremap <C-h> <left>
@@ -154,22 +172,7 @@ inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
 
-" Use system clipboard for yanks
-if has('clipboard')
-    if has('unnamedplus')  " When possible use + register for copy-paste
-        set clipboard=unnamed,unnamedplus
-    else         " On mac and Windows, use * register for copy-paste
-        set clipboard=unnamed
-    endif
-endif
-
-
-" Fold code
-set foldmethod=indent
-set foldnestmax=2
-set foldlevel=1
-
-" Quick text divider in insert mode
+" Quick 80 char text divider
 inoremap <F2> ################################################################################
 
 " Coc keybindings
@@ -190,7 +193,6 @@ noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
 " Toggle comments
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
-
 
 " Toggle fuzzy search current file ctags
 nmap <C-t> <ESC>:BTags<CR>
