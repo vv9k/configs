@@ -3,7 +3,7 @@
 ;---------;
 [bar/top-bar]
 bottom = false
-monitor = DVI-D-0
+monitor = DP1
 override-redirect = true
 ;;;;;;;;;;;;;;;;;;;; DIMENSIONS ;;;;;;;;;;;;;;;;;;;;;;;
 width = 100%
@@ -40,8 +40,20 @@ modules-right = volume date-time
 ;----------------;
 [bar/top-bar2]
 inherit = bar/top-bar	
-monitor = HDMI-0
+monitor = HDMI2
+modules-left = 
+modules-center = bspwm
+modules-right = date-time
 
+;----------------;
+;   TOP-BAR3     ;
+;----------------;
+[bar/top-bar3]
+inherit = bar/top-bar	
+monitor = HDMI1
+modules-left = date-time
+modules-center = bspwm
+modules-right =
 
 
 ;--------------------;
