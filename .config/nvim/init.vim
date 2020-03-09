@@ -174,6 +174,7 @@ inoremap <C-l> <right>
 
 " Quick 80 char text divider
 inoremap <F2> ################################################################################
+inoremap <F3> --------------------------------------------------------------------------------
 
 " Coc keybindings
 nmap <F1> <Plug>(coc-diagnostic-prev-error)
