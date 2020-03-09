@@ -12,7 +12,7 @@ super + s
 
 # Lockscreen
 ctrl + alt + l
-	i3lock -t -i /home/wojtek/wallpapers/arch.png
+	i3lock -t -i /home/wojtek/wallpapers/lilac.png
 
 # close app
 super + q
@@ -28,11 +28,11 @@ super + f
 super + shift + {1-8}
 	bspc node -d '^{1-8}'
 super + 1
-	bspc desktop -f ^1 && bspc desktop -f ^4 && bspc desktop -f ^7
+	bspc desktop -f ^1 && bspc desktop -f ^4
 super + 2
-	bspc desktop -f ^2 && bspc desktop -f ^5 && bspc desktop -f ^8
+	bspc desktop -f ^2 && bspc desktop -f ^5
 super + 3
-	bspc desktop -f ^3 && bspc desktop -f ^6 && bspc desktop -f ^9
+	bspc desktop -f ^3 && bspc desktop -f ^6
 
 ## send the window in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
