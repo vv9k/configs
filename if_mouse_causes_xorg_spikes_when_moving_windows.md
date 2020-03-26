@@ -1,3 +1,0 @@
- - Install power managment tool `tlp`
- - check for id of mouse with `lsusb`
- - add `USB_BLACKLIST=$mouse_id` to `/etc/default/tlp`
