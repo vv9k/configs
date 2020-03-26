@@ -44,3 +44,6 @@ picom -b
 pkill polybar
 polybar top-bar &
 polybar top-bar2 &
+
+# Notification server
+dunst &
