@@ -82,3 +82,9 @@ XF86Audio{Play,Pause,Next,Prev}
 ## Brightness buttons
 XF86MonBrightness{Up,Down}
 	xbacklight {-inc,-dec} 5
+
+## Screenshot
+Print
+	flameshot gui
+ctrl + Print
+	flameshot screen -p ~/screenshots
