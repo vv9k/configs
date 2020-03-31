@@ -18,6 +18,7 @@ alias diff='diff --color=always -y'
 alias autoremove='yaourt -Qtd'
 alias sshpi='ssh -p 666 root@pytlas'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass'"
+alias work="ssh wojtek@10.92.2.206"
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
