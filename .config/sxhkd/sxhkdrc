@@ -1,6 +1,6 @@
 # Terminal
 super + Return
-	termite
+	alacritty
 
 # App launcher
 super + d

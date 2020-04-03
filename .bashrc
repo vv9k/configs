@@ -7,7 +7,7 @@ export EXA_COLORS="di=35;01:ur=38;5;204;01:gr=38;5;204:tr=38;5;204:uw=38;5;164;0
 
 # to make 256 colors work in tmux
 #termite
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 # Or for urxvt
 #export TERM="urxvt-256color"
 
