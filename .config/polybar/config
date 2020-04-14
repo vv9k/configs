@@ -13,7 +13,7 @@ offset-y = 0
 
 ;;;;;;;;;;;;;;;;;;;; APPEARANCE ;;;;;;;;;;;;;;;;;;;;;;;
 background = #000000
-foreground = #875faf
+foreground = #0087d7
 
 line-size = 1
 line-color = #d75fd7
@@ -71,10 +71,10 @@ format = <label> <bar-used>
 label =  %gb_used%/%gb_free%
 bar-used-indicator =
 bar-used-width = 25
-bar-used-foreground-0 = #00ff87
-bar-used-foreground-1 = #00ff87
-bar-used-foreground-2 = #d7af00
-bar-used-foreground-3 = #ff5f87
+bar-used-foreground-0 = #5fff5f
+bar-used-foreground-1 = #5fff5f
+bar-used-foreground-2 = #ffff87
+bar-used-foreground-3 = #ff5f00
 bar-used-fill = ▐
 bar-used-empty = ▐
 bar-used-empty-foreground = #444444
@@ -134,7 +134,7 @@ time = %H:%M
 date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 format = <label>
-format-foreground = #ff5f87
+format-foreground = #ffff78
 label =  %time% ||  %date%
 label-font = 3
 
@@ -154,7 +154,7 @@ ws-icon-5 = 6;
 label-focused =  %name%
 label-focused-padding = 3 
 label-focused-foreground = #AFAFAF
-label-focused-underline = #ff5f87
+label-focused-underline = #ffff78
 label-unfocused = %name%
 label-unfocused-padding = 3
 label-unfocused-foreground = #0063CF
