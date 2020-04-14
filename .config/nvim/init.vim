@@ -14,6 +14,7 @@ Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'ayu-theme/ayu-vim'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -63,18 +64,22 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 "set background=light
+let ayucolor="dark"
 syntax on
 
+colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox
-"colorscheme solarized8_high
-colorscheme challenger_deep
+"colorscheme solarized8
+"colorscheme challenger_deep
 "colorscheme xcodedark
 
 " Make airline use powerline fonts
 " remember to install powerline-fonts
 let g:airline_powerline_fonts = 1
+
+set guifont=Fira\ Code:h11
 
 "################################################################################
 "				CODE
@@ -121,6 +126,8 @@ set shiftwidth=8
 set softtabstop=8
 set tabstop=8
 set noexpandtab
+
+set ttyfast
 
 " Use short tabs for html and css
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
