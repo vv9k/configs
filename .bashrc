@@ -3,7 +3,7 @@ parse_git_branch() {
 }
 
 export PS1="\[\e[38;5;32;1m\]vv \[\e[38;5;228;1m\]\[\e[m\]\[\e[m\] | \[\e[38;5;202m\]\w\[\e[38;5;228m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;32;1m\]\n=>\[\e[m\] "
-export PATH="/home/wojtek/bin:/home/wojtek/.cargo/bin:$PATH"
+export PATH="/home/wojtek/bin:/home/wojtek/.cargo/bin:/home/wojtek/.local/bin:$PATH"
 
 alias ls='exa'
 alias vim='nvim'
