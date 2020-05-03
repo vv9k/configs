@@ -1,6 +1,6 @@
 {
-	"rust-analyzer.raLspServerPath":
-	"/usr/bin/ra_lsp_server",
+	"rust-analyzer.serverPath":
+	"/usr/bin/rust-analyzer",
 	"languageserver": {
   		"ccls": {
   			"command": "ccls",
