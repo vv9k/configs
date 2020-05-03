@@ -45,6 +45,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'baskerville/vim-sxhkdrc'
+Plug 'itchyny/vim-haskell-indent'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
