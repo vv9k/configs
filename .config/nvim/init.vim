@@ -68,17 +68,19 @@ set background=dark
 let ayucolor="dark"
 syntax on
 
-colorscheme ayu
+"colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
-"colorscheme gruvbox
-"colorscheme solarized8
+colorscheme gruvbox
+"colorscheme solarized8_high
 "colorscheme challenger_deep
 "colorscheme xcodedark
 
 " Make airline use powerline fonts
 " remember to install powerline-fonts
 let g:airline_powerline_fonts = 1
+
+let g:gruvbox_contrast_dark='hard'
 
 set guifont=Fira\ Code:h11
 
@@ -208,3 +210,6 @@ nmap <C-t> <ESC>:BTags<CR>
 
 " Toggle fuzzy search for current buffer
 nmap <C-l> <ESC>:BLines<CR>
+
+" symbol renaming
+nmap <leader>rn <Plug>(coc-rename)

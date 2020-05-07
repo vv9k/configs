@@ -13,7 +13,10 @@ offset-y = 0
 
 ;;;;;;;;;;;;;;;;;;;; APPEARANCE ;;;;;;;;;;;;;;;;;;;;;;;
 background = #000000
-foreground = #0087d7
+;ayu
+;foreground = #0087d7
+;gruvbox
+foreground = #b8bb26
 
 line-size = 1
 line-color = #d75fd7
@@ -134,9 +137,12 @@ time = %H:%M
 date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 format = <label>
-format-foreground = #ffff78
 label =  %time% ||  %date%
 label-font = 3
+;;ayu
+;format-foreground = #ffff78
+;;gruvbox
+format-foreground = #fb4934
 
 [module/bspwm]
 type = internal/bspwm
@@ -151,10 +157,15 @@ ws-icon-4 = 5;
 ws-icon-5 = 6;
 
 
+;;ayu
+;label-focused-underline = #ffff78
+;;gruvbox
+label-focused-underline = #fb4934
+
+
 label-focused =  %name%
 label-focused-padding = 3 
 label-focused-foreground = #AFAFAF
-label-focused-underline = #ffff78
 label-unfocused = %name%
 label-unfocused-padding = 3
 label-unfocused-foreground = #0063CF

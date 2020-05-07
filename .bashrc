@@ -2,7 +2,11 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\[\e[38;5;32;1m\]vv \[\e[38;5;228;1m\]\[\e[m\]\[\e[m\] | \[\e[38;5;202m\]\w\[\e[38;5;228m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;32;1m\]\n=>\[\e[m\] "
+# Ayu
+#export PS1="\[\e[38;5;32;1m\]vv \[\e[38;5;228;1m\]\[\e[m\]\[\e[m\] | \[\e[38;5;202m\]\w\[\e[38;5;228m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;32;1m\]\n=>\[\e[m\] " #ayu
+# Gruvbox
+export PS1="\[\e[38;5;142;1m\]vv \[\e[38;5;108;1m\]\[\e[m\]\[\e[m\] | \[\e[38;5;167m\]\w\[\e[38;5;108m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;142;1m\]\n=>\[\e[m\] " #gruvbox
+
 export PATH="/home/wojtek/bin:/home/wojtek/.cargo/bin:/home/wojtek/.local/bin:$PATH"
 
 alias ls='exa'
