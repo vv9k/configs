@@ -1,6 +1,8 @@
 {
 	"rust-analyzer.serverPath":
 	"/usr/bin/rust-analyzer",
+	"rust-analyzer.inlayHints.chainingHints": true,
+	"coc.preferences.formatOnSaveFiletypes": ["rust"],
 	"languageserver": {
   		"ccls": {
   			"command": "ccls",
