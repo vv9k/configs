@@ -16,6 +16,7 @@ alias sshpi='ssh -p 666 root@pytlas'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass'"
 alias work="ssh wojtek@10.92.2.206"
 alias theme="$HOME/dev/scripts/theme.sh"
+alias update="yay -Syu && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
