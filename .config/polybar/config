@@ -16,7 +16,9 @@ background = #000000
 ;ayu
 ;foreground = #0087d7
 ;gruvbox
-foreground = #b8bb26
+;foreground = #b8bb26
+;solarized
+foreground = #268bd2
 
 line-size = 1
 line-color = #d75fd7
@@ -142,7 +144,9 @@ label-font = 3
 ;;ayu
 ;format-foreground = #ffff78
 ;;gruvbox
-format-foreground = #fb4934
+;format-foreground = #fb4934
+;;solarized
+format-foreground = #cb4b16
 
 [module/bspwm]
 type = internal/bspwm
@@ -160,7 +164,9 @@ ws-icon-5 = 6;
 ;;ayu
 ;label-focused-underline = #ffff78
 ;;gruvbox
-label-focused-underline = #fb4934
+;label-focused-underline = #fb4934
+;;solarized
+label-focused-underline = #cb4b16
 
 
 label-focused =  %name%

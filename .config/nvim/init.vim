@@ -50,6 +50,10 @@ Plug 'itchyny/vim-haskell-indent'
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
+
+" Other
+Plug 'lifepillar/vim-colortemplate'
+
 call plug#end()
 
 "################################################################################
@@ -66,13 +70,15 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 "set background=light
 let ayucolor="dark"
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 syntax on
 
 "colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
-colorscheme gruvbox
-"colorscheme solarized8_high
+"colorscheme gruvbox
+colorscheme solarized8_high
 "colorscheme challenger_deep
 "colorscheme xcodedark
 
@@ -80,7 +86,6 @@ colorscheme gruvbox
 " remember to install powerline-fonts
 let g:airline_powerline_fonts = 1
 
-let g:gruvbox_contrast_dark='hard'
 
 set guifont=Fira\ Code:h11
 
@@ -125,10 +130,11 @@ set smartcase
 set gdefault
 
 " Use wide tabs
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
-set noexpandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+set smarttab
 
 set ttyfast
 
