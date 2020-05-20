@@ -30,7 +30,7 @@ sxhkd &
 
 # Wallpaper
 pkill feh
-feh --bg-fill /home/wojtek/wallpapers/ayu.jpg
+feh --bg-fill /home/wojtek/wallpapers/solarized.png
 
 xset b off # Bell off
 xset s off # Screen Save off
@@ -38,7 +38,7 @@ xset -dpms # Power Saver off
 
 # Composition manage
 pkill picom
-picom -b
+picom -b --experimental-backends
 
 # Top bar
 pkill polybar
