@@ -1,3 +1,14 @@
+configuration {
+    fullscreen: true;
+    show-icons: false;
+    font: "Fira Code 16";
+    modi: "run";
+    combi-modi: "run";
+    display-combi: "cmd";
+    display-run: "";
+    lines: 5;
+}
+
 * {
   background-color: #282C33;
   border-color: #2e343f;
@@ -9,6 +20,7 @@
 inputbar {
   border: 0 0 1px 0;
   children: [prompt,entry];
+  padding: 300 0 0 600;
 }
 
 prompt {
@@ -31,6 +43,7 @@ listview {
   cycle: false;
   margin: 0 0 -1px 0;
   scrollbar: false;
+  padding: 0 600 300 600;
 }
 
 element {
