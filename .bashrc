@@ -10,7 +10,9 @@ parse_git_branch() {
 export PS1="\[\e[38;5;33;1m\]vv \[\e[38;5;166;1m\]\[\e[m\]\[\e[m\] | \[\e[38;5;37m\]\w\[\e[38;5;166m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;33;1m\]\n=>\[\e[m\] " #solarized
 
 export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export BAT_THEME="Solarized (light)"
 
+alias bat='cat'
 alias ls='exa'
 alias vim='nvim'
 alias diff='diff --color=always -y'
