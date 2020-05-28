@@ -12,7 +12,7 @@ export PS1="\[\e[38;5;33;1m\]vv \[\e[38;5;166;1m\]\[\e[m\]\[\e[m\] | \[\e[38;
 export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export BAT_THEME="Solarized (light)"
 
-alias bat='cat'
+alias cat='bat'
 alias ls='exa'
 alias vim='nvim'
 alias diff='diff --color=always -y'
