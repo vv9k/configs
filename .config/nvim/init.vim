@@ -78,7 +78,7 @@ syntax on
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox
-colorscheme solarized8_high
+colorscheme solarized8
 "colorscheme challenger_deep
 "colorscheme xcodedark
 
