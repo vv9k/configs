@@ -21,6 +21,7 @@ alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool 
 alias work="ssh wojtek@10.92.2.206"
 alias theme="$HOME/dev/scripts/theme.sh"
 alias update="yay -Syu && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
+alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
