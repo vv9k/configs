@@ -30,7 +30,7 @@ sxhkd &
 
 # Wallpaper
 pkill feh
-feh --bg-fill /home/wojtek/wallpapers/solarized.png
+feh --bg-fill /home/wojtek/wallpapers/solarized.png --bg-fill /home/wojtek/wallpapers/crosshair.jpg
 
 xset b off # Bell off
 xset s off # Screen Save off
