@@ -1,0 +1,3 @@
+map <C-i> recolor
+set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#1f1f1f"
