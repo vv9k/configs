@@ -47,3 +47,7 @@ polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 
 # Notification server
 dunst &
+
+# Nightshift
+pkill redshift
+redshift -l 52.13:21.0 &
