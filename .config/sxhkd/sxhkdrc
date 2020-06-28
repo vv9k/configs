@@ -1,30 +1,30 @@
 # Terminal
 super + Return
-	alacritty
+    alacritty
 super + shift + Return
-	termite
+    termite
 
 # App launcher
 super + d
-	rofi -show combi
+    rofi -show combi
 
 # Restart sxhkd
 super + s
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 # Lockscreen
 ctrl + alt + l
-	i3lock -t -i /home/wojtek/wallpapers/lilac.png
+    dm-tool switch-to-greeter
 
 # close app
 super + q
-	bspc node -c
+    bspc node -c
 super + Q
-	bspc node -k
+    bspc node -k
 
 # Fullscreen
 super + f
-	bspc desktop -l next
+    bspc desktop -l next
 
 ## focus or send to the given desktop
 super + shift + 1
@@ -55,7 +55,7 @@ super + 6
 
 ## send the window in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,m} {west,south,north,east}
+    bspc node -{f,m} {west,south,north,east}
 
 ## toggle beetwen pseudo-tiled & tiled
 super + p
@@ -67,43 +67,43 @@ super + space
 
 ## just in case you want to go back to tiled mode but the toggle keybind doesn't work
 super + t
-	bspc node -t tiled
+    bspc node -t tiled
 
 ## expanding windows
 super + ctrl + {Left,Right,Up,Down}
-	bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
-	
+    bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
+    
 ## shrinking windows
 super + alt + {Left,Right,Up,Down}
-	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
+    bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
 
 ctrl + shift + {Left,Down,Up,Right}
-	bspc node -s {west,south,north,east}
+    bspc node -s {west,south,north,east}
 
 ## reload bspwm config
 super + shift + BackSpace
-	pkill panel;~/.config/bspwm/bspwmrc
+    pkill panel;~/.config/bspwm/bspwmrc
 
 ## focus the next/previous desktop in the current monitor
 ctrl + alt + Left
-	bspc desktop -f prev.local
+    bspc desktop -f prev.local
 ctrl + alt + Right
-	bspc desktop -f next.local
+    bspc desktop -f next.local
 
 ## Audio controls
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+    pactl set-sink-mute 0 toggle
 XF86Audio{RaiseVolume,LowerVolume}
-	pactl set-sink-volume 0 {+,-}5%
+    pactl set-sink-volume 0 {+,-}5%
 XF86Audio{Play,Pause,Next,Prev}
-	playerctl {play,pause,next,previous}
+    playerctl {play,pause,next,previous}
 
 ## Brightness buttons
 XF86MonBrightness{Up,Down}
-	xbacklight {-inc,-dec} 5
+    xbacklight {-inc,-dec} 5
 
 ## Screenshot
 Print
-	flameshot gui
+    flameshot gui
 ctrl + Print
-	flameshot screen -p ~/screenshots
+    flameshot screen -p ~/screenshots
