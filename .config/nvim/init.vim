@@ -15,6 +15,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'fratajczak/one-monokai-vim'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -46,6 +48,8 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'itchyny/vim-haskell-indent'
+Plug 'fatih/vim-go'
+Plug 'cakebaker/scss-syntax.vim'
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
@@ -77,10 +81,12 @@ syntax on
 "colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
-"colorscheme gruvbox
-colorscheme solarized8
+colorscheme gruvbox
+"colorscheme solarized8
 "colorscheme challenger_deep
 "colorscheme xcodedark
+"colorscheme nord
+"colorscheme one-monokai
 
 " Make airline use powerline fonts
 " remember to install powerline-fonts
@@ -112,6 +118,14 @@ let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/
 
 "C#
 let g:OmniSharp_server_use_mono = 1
+
+" Python
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python2'
+
+" Go
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
 
 "################################################################################
 "				BASIC SETTINGS
@@ -190,7 +204,8 @@ inoremap <C-l> <right>
 
 " Quick 80 char text divider
 inoremap <F2> ################################################################################
-inoremap <F3> --------------------------------------------------------------------------------
+inoremap <F3> ########################################
+inoremap <F4> --------------------------------------------------------------------------------
 
 " Coc keybindings
 nmap <F1> <Plug>(coc-diagnostic-prev-error)
@@ -219,3 +234,35 @@ nmap <C-l> <ESC>:BLines<CR>
 
 " symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+
+"################################################################################
+" Pretty xml
+function! DoPrettyXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  " xmllint will insert an <?xml?> header. it's easy enough to delete
+  " if you don't want it.
+  " delete the fake tags
+  2d
+  $d
+  " restore the 'normal' indentation, which is one extra level
+  " too deep due to the extra tags we wrapped around the document.
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+command! PrettyXML call DoPrettyXML()
+
