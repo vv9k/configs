@@ -81,8 +81,8 @@ syntax on
 "colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
-colorscheme gruvbox
-"colorscheme solarized8
+"colorscheme gruvbox
+colorscheme solarized8
 "colorscheme challenger_deep
 "colorscheme xcodedark
 "colorscheme nord
