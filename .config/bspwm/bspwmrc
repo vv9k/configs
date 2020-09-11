@@ -2,10 +2,11 @@
 
 # xrandr
 pkill xrandr
-xrandr --output HDMI-0 --auto --output DP-1 --rotate right --auto --left-of HDMI-0
+xrandr --output HDMI-1 --auto --output DP-2 --rotate right --auto --left-of HDMI-1
+#xrandr --output HDMI-1 --auto --output DP-2 --auto --left-of HDMI-1
 
-bspc monitor HDMI-0 -d I II III
-bspc monitor DP-1 -d IV V VI
+bspc monitor HDMI-1 -d I II III
+bspc monitor DP-2 -d IV V VI
 
 
 bspc config border_width        1.5
