@@ -15,6 +15,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
+Plug 'fratajczak/one-monokai-vim'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -46,6 +47,8 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'itchyny/vim-haskell-indent'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
@@ -75,10 +78,11 @@ let g:gruvbox_contrast_light='hard'
 syntax on
 
 "colorscheme ayu
+colorscheme ayu
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox
-colorscheme solarized8
+"colorscheme solarized8
 "colorscheme challenger_deep
 "colorscheme xcodedark
 
@@ -108,7 +112,7 @@ let g:rustfmt_options = '--edition 2018'
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rust_clip_command = 'xclip -selection clipboard'
-let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/rust/src"
+"let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/rust/src"
 
 "C#
 let g:OmniSharp_server_use_mono = 1
@@ -181,6 +185,12 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+" Resize split
+map <C-s><right> :vertical resize -5<CR>
+map <C-s><left> :vertical resize +5<CR>
+map <C-s><up> :resize -5<CR>
+map <C-s><down> :resize +5<CR>
 
 " Use Ctrl + hjkl in input mode for arrows
 inoremap <C-h> <left>

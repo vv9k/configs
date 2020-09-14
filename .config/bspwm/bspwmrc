@@ -2,10 +2,11 @@
 
 # xrandr
 pkill xrandr
-xrandr --output HDMI-0 --auto --output DP-1 --rotate right --auto --left-of HDMI-0
+xrandr --output HDMI1 --auto --output DP1 --right-of HDMI1 --output HDMI2 --auto --right-of DP1 --rotate left
 
-bspc monitor HDMI-0 -d I II III
-bspc monitor DP-1 -d IV V VI
+bspc monitor HDMI1 -d   
+bspc monitor DP1 -d   
+bspc monitor HDMI2 -d   禎
 
 
 bspc config border_width        1.5
@@ -21,6 +22,11 @@ bspc config top_padding 40
 bspc config focused_border_color "#d8dee8" 
 bspc config normal_border_color "#2f343f"
 
+bspc rule -a Pidgin state=floating desktop=^2
+bspc rule -a Rocket.Chat state=floating desktop=^2
+bspc rule -a Thunderbird desktop=^1
+bspc rule -a firefox desktop=^4
+bspc rule -a Alacritty desktop=^7
 
 ###############################################################################
 
@@ -30,7 +36,7 @@ sxhkd &
 
 # Wallpaper
 pkill feh
-feh --bg-fill /home/wojtek/wallpapers/solarized.png --bg-fill /home/wojtek/wallpapers/crosshair.jpg
+feh --bg-fill /home/wojtek/wallpapers/rainbow.jpg
 
 xset b off # Bell off
 xset s off # Screen Save off
@@ -44,6 +50,7 @@ picom -b --experimental-backends
 pkill polybar
 polybar --config=/home/wojtek/.config/polybar/config.ini top1 &
 polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
+polybar --config=/home/wojtek/.config/polybar/config.ini top3 &
 
 # Notification server
 dunst &
@@ -51,3 +58,9 @@ dunst &
 # Nightshift
 pkill redshift
 redshift -l 52.13:21.0 &
+
+pidgin &
+rocketchat-desktop &
+thunderbird &
+if [[ $(psgrep firefox) == "" ]]; then nohup firefox; fi
+if [[ $(psgrep alacritty) == "" ]]; then nohup alacritty; fi

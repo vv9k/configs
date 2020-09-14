@@ -8,7 +8,7 @@ font:
   italic:
     family: Fira Code
     style: Italic
-  size: 12
+  size: 11
 schemes:
   ayu: &ayu
     primary:
@@ -78,7 +78,7 @@ schemes:
       magenta: '0x6c71c4'
       cyan:    '0x93a1a1'
       white:   '0xfdf6e3'
-colors: *solarized
+colors: *ayu
 window:
   padding:
     x: 10
