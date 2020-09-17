@@ -25,7 +25,7 @@ parse_git_branch() {
 #export BAT_THEME="Solarized(light)"
 #------------------------------------------------------------------------------#
 # Nord
-export PS1="\[\e[38;5;6;1m\]vv \[\e[m\]\[\e[m\] | \[\e[38;5;6m\]\w\[\e[38;5;6m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;6;1m\]\n=>\[\e[m\] " #nord
+#export PS1="\[\e[38;5;6;1m\]vv \[\e[m\]\[\e[m\] | \[\e[38;5;6m\]\w\[\e[38;5;6m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;6;1m\]\n=>\[\e[m\] " #nord
 export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export BAT_THEME="Nord"
 ################################################################################
@@ -50,5 +50,7 @@ alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
 export GOPATH="$HOME/go/"
-
+# Fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Starship shell
+eval "$(starship init bash)"
