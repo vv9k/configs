@@ -1,12 +1,22 @@
+
+"##############################################################################"
+"                                      _                                       " 
+"                                     (_)                                      " 
+"                           _ ____   ___ _ __ ___                              " 
+"                          | '_ \ \ / / | '_ ` _ \                             " 
+"                          | | | \ V /| | | | | | |                            " 
+"                          |_| |_|\_/ |_|_| |_| |_|                            " 
+"                                                                              " 
+"##############################################################################"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PLUGINS ~~~~~
+"##############################################################################"
 set shell=/bin/bash
 
-"################################################################################
-"				PLUGINS
-
 call plug#begin()
+"------------------------------------------------------------------------------"
 " Git
 Plug 'tpope/vim-fugitive'
-
+"------------------------------------------------------------------------------"
 " ColorSchemes
 Plug 'sainnhe/edge'
 Plug 'wojciechkepka/tequila-sunrise.vim'
@@ -17,29 +27,28 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fratajczak/one-monokai-vim'
-
+"------------------------------------------------------------------------------"
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
-
-" Nerdtree
-Plug 'scrooloose/nerdtree'
-
+"------------------------------------------------------------------------------"
 " Comments
 Plug 'preservim/nerdcommenter'
-
+Plug 'cometsong/CommentFrame.vim'
+"------------------------------------------------------------------------------"
 " File structure
+Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-
+"------------------------------------------------------------------------------"
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
+"------------------------------------------------------------------------------"
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+"------------------------------------------------------------------------------"
 " Syntactic language support
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
@@ -50,20 +59,16 @@ Plug 'baskerville/vim-sxhkdrc'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'fatih/vim-go'
 Plug 'cakebaker/scss-syntax.vim'
-
+"------------------------------------------------------------------------------"
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
-
-" Other
-Plug 'lifepillar/vim-colortemplate'
-
+"------------------------------------------------------------------------------"
 call plug#end()
-
-"################################################################################
-"				COLORSCHEME
-
-"truecolor
+"##############################################################################"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLORSCHEME ~~~~~
+"##############################################################################"
+" Settings
 if (has("termguicolors"))
     set termguicolors
 endif
@@ -77,27 +82,26 @@ let ayucolor="dark"
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='hard'
 syntax on
-
+"------------------------------------------------------------------------------"
+" Colorscheme
+colorscheme nord
 "colorscheme ayu
-"colorscheme tequila-sunrise
-"colorscheme edge
 "colorscheme gruvbox
-colorscheme solarized8
-"colorscheme challenger_deep
-"colorscheme xcodedark
-"colorscheme nord
+"colorscheme solarized8
 "colorscheme one-monokai
-
+"colorscheme challenger_deep
+"colorscheme tequila-sunrise
+"colorscheme xcodedark
+"colorscheme edge
+"------------------------------------------------------------------------------"
+" Fonts
 " Make airline use powerline fonts
 " remember to install powerline-fonts
 let g:airline_powerline_fonts = 1
-
-
 set guifont=Fira\ Code:h11
-
-"################################################################################
-"				CODE
-
+"##############################################################################"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CODE ~~~~~
+"##############################################################################"
 " Autocomplete
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -107,7 +111,7 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-
+"------------------------------------------------------------------------------"
 " Rust
 let g:rustfmt_autosave = 1
 let g:rustfmt_options = '--edition 2018'
@@ -115,56 +119,56 @@ let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rust_clip_command = 'xclip -selection clipboard'
 let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/rust/src"
-
-"C#
+"------------------------------------------------------------------------------"
+" C#
 let g:OmniSharp_server_use_mono = 1
-
+"------------------------------------------------------------------------------"
 " Python
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python2'
-
+"------------------------------------------------------------------------------"
 " Go
 "let g:go_def_mode='gopls'
 "let g:go_info_mode='gopls'
-
-"################################################################################
-"				BASIC SETTINGS
-
+"##############################################################################"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Basic Settings ~~~~~
+"##############################################################################"
 " Better display for messages
 set cmdheight=2
-
+"------------------------------------------------------------------------------"
 " Permanent undo
 set undodir=~/.vimdid
 set undofile
-
+"------------------------------------------------------------------------------"
 " Proper search
 set incsearch
 set ignorecase
 set smartcase
 set gdefault
-
+"------------------------------------------------------------------------------"
 " Use wide tabs
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
 set smarttab
-
+"------------------------------------------------------------------------------"
+" For tmux over ssh
 set ttyfast
-
+"------------------------------------------------------------------------------"
 " Use short tabs for html and css
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 expandtab
-
+"------------------------------------------------------------------------------"
 " Display line number
 set nu
 set splitright
-
+"------------------------------------------------------------------------------"
 " Fold code
 set foldmethod=indent
 set foldnestmax=2
 set foldlevel=1
-
+"------------------------------------------------------------------------------"
 " Use system clipboard for yanks
 if has('clipboard')
     if has('unnamedplus')  " When possible use + register for copy-paste
@@ -173,96 +177,64 @@ if has('clipboard')
         set clipboard=unnamed
     endif
 endif
-
-"################################################################################
-"				KEYBINDINGS
-
+"##############################################################################"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ KEYBINDINGS ~~~~~
+"##############################################################################"
 " Switch between tabs
 map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
-
+"------------------------------------------------------------------------------"
 " Toggle nerdtree
 map <C-k> :NERDTreeToggle<CR>
-
+"------------------------------------------------------------------------------"
 " Open hotkeys
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
-
+"------------------------------------------------------------------------------"
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-
+"------------------------------------------------------------------------------"
 " Use Ctrl + hjkl in input mode for arrows
 inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
-
-" Quick 80 char text divider
+"------------------------------------------------------------------------------"
+" Quick text divider
 inoremap <F2> ################################################################################
 inoremap <F3> ########################################
 inoremap <F4> --------------------------------------------------------------------------------
-
+"------------------------------------------------------------------------------"
 " Coc keybindings
 nmap <F1> <Plug>(coc-diagnostic-prev-error)
 nmap <F2> <Plug>(coc-diagnostic-next-error)
 nmap <F3> <Plug>(coc-diagnostic-next)
 nmap <F4> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
-
+"------------------------------------------------------------------------------"
 " Toggle code navigation
 " remember to install rusty-tags with it
 " cargo install rusty-tags
 nmap <F8> :TagbarToggle<CR>
-
+"------------------------------------------------------------------------------"
 " Run rust and python
 noremap <F5> <ESC>:w<CR>:!python %<CR>
 noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
-
+"------------------------------------------------------------------------------"
 " Toggle comments
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
-
+"------------------------------------------------------------------------------"
 " Toggle fuzzy search current file ctags
 nmap <C-t> <ESC>:BTags<CR>
-
+"------------------------------------------------------------------------------"
 " Toggle fuzzy search for current buffer
 nmap <C-l> <ESC>:BLines<CR>
-
+"------------------------------------------------------------------------------"
 " symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
-
-"################################################################################
-" Pretty xml
-function! DoPrettyXML()
-  " save the filetype so we can restore it later
-  let l:origft = &ft
-  set ft=
-  " delete the xml header if it exists. This will
-  " permit us to surround the document with fake tags
-  " without creating invalid xml.
-  1s/<?xml .*?>//e
-  " insert fake tags around the entire document.
-  " This will permit us to pretty-format excerpts of
-  " XML that may contain multiple top-level elements.
-  0put ='<PrettyXML>'
-  $put ='</PrettyXML>'
-  silent %!xmllint --format -
-  " xmllint will insert an <?xml?> header. it's easy enough to delete
-  " if you don't want it.
-  " delete the fake tags
-  2d
-  $d
-  " restore the 'normal' indentation, which is one extra level
-  " too deep due to the extra tags we wrapped around the document.
-  silent %<
-  " back to home
-  1
-  " restore the filetype
-  exe "set ft=" . l:origft
-endfunction
-command! PrettyXML call DoPrettyXML()
 
