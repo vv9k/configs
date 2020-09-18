@@ -22,11 +22,13 @@ bspc config top_padding 40
 bspc config focused_border_color "#d8dee8" 
 bspc config normal_border_color "#2f343f"
 
-bspc rule -a Pidgin state=floating desktop=^2
-bspc rule -a Rocket.Chat state=floating desktop=^2
-bspc rule -a Thunderbird desktop=^1
+
+bspc rule -a Pidgin desktop=^6 state=floating
+bspc rule -a Rocket.Chat desktop=^6 state=floating
+bspc rule -a Thunderbird desktop=^5
 bspc rule -a firefox desktop=^4
-bspc rule -a Alacritty desktop=^7
+bspc rule -a Alacritty desktop=^1
+bspc rule -a Chromium state=floating
 
 ###############################################################################
 
