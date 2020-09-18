@@ -16,6 +16,7 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'fratajczak/one-monokai-vim'
+Plug 'arcticicestudio/nord-vim'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -78,7 +79,7 @@ let g:gruvbox_contrast_light='hard'
 syntax on
 
 "colorscheme ayu
-colorscheme ayu
+colorscheme nord
 "colorscheme tequila-sunrise
 "colorscheme edge
 "colorscheme gruvbox

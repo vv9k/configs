@@ -11,7 +11,9 @@ parse_git_branch() {
 
 # shell
 PROMPT_COMMAND=echo
-export PS1="\[\e[38;5;33;1m\]vv \[\e[38;5;166;1m\]漣\[\e[m\]\[\e[m\] | \[\e[38;5;37m\]\w\[\e[38;5;166m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;33;1m\]\n=>\[\e[m\] " #solarized
+#export PS1="\[\e[38;5;33;1m\]vv \[\e[38;5;166;1m\]漣\[\e[m\]\[\e[m\] | \[\e[38;5;37m\]\w\[\e[38;5;166m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;33;1m\]\n=>\[\e[m\] " #solarized
+export PS1="\[\e[38;5;6;1m\]vv 漣\[\e[m\]\[\e[m\] | \[\e[38;5;6m\]\w\[\e[38;5;6m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;6;1m\]\n=>\[\e[m\] " #nord
+
 export LC_ALL="en_US.UTF-8"
 export EXA_COLORS=
 export EDITOR="nvim"
@@ -34,7 +36,6 @@ export REPORTER_AUTH="CjK8xrYc3yVZ9cSESGyJyUFvLatevptAe5Zm83DvuVw24CjtfzEzqHs6WX
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ################################################################################
 #                                  ALIASES                                     #
@@ -60,3 +61,9 @@ alias vbackup="rdesktop -K -g 1920x1200 vbackup"
 alias kvm="java -jar /home/wojtek/bin/iClientJ.jar"
 
 ################################################################################
+#                                   OTHER                                      #
+################################################################################
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(starship init bash)"
