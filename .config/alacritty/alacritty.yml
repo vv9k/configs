@@ -77,33 +77,63 @@ schemes:
       bar:
         background: '#434c5e'
         foreground: '#d8dee9'
-  normal:
-    black: '#3b4252'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#88c0d0'
-    white: '#e5e9f0'
-  bright:
-    black: '#4c566a'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#8fbcbb'
-    white: '#eceff4'
-  dim:
-    black: '#373e4d'
-    red: '#94545d'
-    green: '#809575'
-    yellow: '#b29e75'
-    blue: '#68809a'
-    magenta: '#8c738c'
-    cyan: '#6d96a5'
-    white: '#aeb3bb'
+    normal:
+      black: '#3b4252'
+      red: '#bf616a'
+      green: '#a3be8c'
+      yellow: '#ebcb8b'
+      blue: '#81a1c1'
+      magenta: '#b48ead'
+      cyan: '#88c0d0'
+      white: '#e5e9f0'
+    bright:
+      black: '#4c566a'
+      red: '#bf616a'
+      green: '#a3be8c'
+      yellow: '#ebcb8b'
+      blue: '#81a1c1'
+      magenta: '#b48ead'
+      cyan: '#8fbcbb'
+      white: '#eceff4'
+    dim:
+      black: '#373e4d'
+      red: '#94545d'
+      green: '#809575'
+      yellow: '#b29e75'
+      blue: '#68809a'
+      magenta: '#8c738c'
+      cyan: '#6d96a5'
+      white: '#aeb3bb'
+  xbliss: &xbliss
+    primary:
+      background: '#2e3140'
+      foreground: '#EFEFF3'
+      dim_foreground: '#CED0DB'
+    cursor:
+      text: '#2e3140'
+      cursor: '#efeff3'
+    vi_mode_cursor:
+      text: '#2e3140'
+      cursor: '#efeff3'
+    selection:
+      text: CellForeground
+      background: '#2e3140'
+    search:
+      matches:
+        foreground: CellBackground
+        background: '#8ff0bc'
+      bar:
+        background: '#434c5e'
+        foreground: '#d8dee9'
+    normal:
+      black: '#2e3140'
+      red: '#f08f92'
+      green: '#bc8ff0'
+      yellow: '#f0bc8f'
+      blue: '#90a5f0'
+      magenta: '#dd90f0'
+      cyan: '#dd90f0'
+      white: '#efeff3'
   solarized: &solarized
     primary:
       background: '0x002b36'
@@ -126,7 +156,7 @@ schemes:
       magenta: '0x6c71c4'
       cyan:    '0x93a1a1'
       white:   '0xfdf6e3'
-colors: *solarized
+colors: *xbliss
 window:
   padding:
     x: 10
