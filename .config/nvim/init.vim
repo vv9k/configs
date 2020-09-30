@@ -27,6 +27,7 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fratajczak/one-monokai-vim'
+Plug 'wojciechkepka/xbliss-vim'
 "------------------------------------------------------------------------------"
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -84,7 +85,7 @@ let g:gruvbox_contrast_light='hard'
 syntax on
 "------------------------------------------------------------------------------"
 " Colorscheme
-colorscheme nord
+"colorscheme nord
 "colorscheme ayu
 "colorscheme gruvbox
 "colorscheme solarized8
@@ -93,6 +94,8 @@ colorscheme nord
 "colorscheme tequila-sunrise
 "colorscheme xcodedark
 "colorscheme edge
+colorscheme xbliss
+let g:airline_theme = "xbliss"
 "------------------------------------------------------------------------------"
 " Fonts
 " Make airline use powerline fonts
