@@ -22,14 +22,11 @@ Plug 'sainnhe/edge'
 Plug 'wojciechkepka/tequila-sunrise.vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
-Plug 'arzg/vim-colors-xcode'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'fratajczak/one-monokai-vim'
 Plug 'arcticicestudio/nord-vim'
-
-Plug 'arcticicestudio/nord-vim'
-Plug 'fratajczak/one-monokai-vim'
+Plug 'wojciechkepka/xbliss-vim'
 "------------------------------------------------------------------------------"
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -87,14 +84,15 @@ let g:gruvbox_contrast_light='hard'
 syntax on
 "------------------------------------------------------------------------------"
 " Colorscheme
-colorscheme nord
+"colorscheme nord
 "colorscheme ayu
-
+"colorscheme solarized8_high
 "colorscheme gruvbox
-
+"colorscheme one-monokai
 "colorscheme challenger_deep
 "colorscheme tequila-sunrise
-"colorscheme xcodedark
+colorscheme xbliss
+let g:airline_theme = "xbliss"
 "colorscheme edge
 "------------------------------------------------------------------------------"
 " Fonts
