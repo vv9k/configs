@@ -64,6 +64,9 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'Chiel92/vim-autoformat'
 "------------------------------------------------------------------------------"
+" Formatting
+Plug 'psf/black', { 'branch': 'stable' }
+"------------------------------------------------------------------------------"
 call plug#end()
 "##############################################################################"
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLORSCHEME ~~~~~
@@ -126,7 +129,7 @@ let g:OmniSharp_server_use_mono = 1
 "------------------------------------------------------------------------------"
 " Python
 let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
 "------------------------------------------------------------------------------"
 " Go
 "let g:go_def_mode='gopls'
