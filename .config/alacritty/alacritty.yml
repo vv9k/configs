@@ -117,7 +117,7 @@ schemes:
       cursor: '#efeff3'
     selection:
       text: CellForeground
-      background: '#4c566a'
+      background: '#474B62'
     search:
       matches:
         foreground: CellBackground
