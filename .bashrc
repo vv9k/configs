@@ -33,7 +33,7 @@ export BAT_THEME="Nord"
 ################################################################################
 # Apps
 alias cat='bat'
-alias ls='exa'
+alias ls='exa --icons'
 alias vim='nvim'
 alias diff='diff --color=always -y'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
