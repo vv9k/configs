@@ -41,6 +41,7 @@ alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool 
 # Remote
 alias sshpi='ssh -p 666 root@pytlas'
 alias work="ssh wojtek@10.92.2.206"
+alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 #------------------------------------------------------------------------------#
 # Util
 alias theme="$HOME/dev/scripts/theme.sh"
