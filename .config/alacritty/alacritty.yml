@@ -106,14 +106,14 @@ schemes:
       white: '#aeb3bb'
   xbliss: &xbliss
     primary:
-      background: '#2e3140'
-      foreground: '#EFEFF3'
-      dim_foreground: '#CED0DB'
+      background: '#2d2a3a'
+      foreground: '#dee0e7'
+      dim_foreground: '#535873'
     cursor:
-      text: '#2e3140'
+      text: '#2d2a3a'
       cursor: '#efeff3'
     vi_mode_cursor:
-      text: '#2e3140'
+      text: '#2d2a3a'
       cursor: '#efeff3'
     selection:
       text: CellForeground
@@ -121,18 +121,18 @@ schemes:
     search:
       matches:
         foreground: CellBackground
-        background: '#8ff0bc'
+        background: '#ae77ec'
       bar:
         background: '#434c5e'
         foreground: '#d8dee9'
     normal:
-      black: '#2e3140'
-      red: '#f08f92'
-      green: '#bc8ff0'
-      yellow: '#f0bc8f'
-      blue: '#90a5f0'
-      magenta: '#dd90f0'
-      cyan: '#dd90f0'
+      black: '#2d2a3a'
+      red: '#ec797d'
+      green: '#caa7f3'
+      yellow: '#ddec79'
+      blue: '#77a5ed'
+      magenta: '#ec79dd'
+      cyan: '#79ecaf'
       white: '#efeff3'
   solarized: &solarized
     primary:
