@@ -127,12 +127,12 @@ schemes:
         foreground: '#d8dee9'
     normal:
       black: '#2d2a3a'
-      red: '#ec797d'
-      green: '#caa7f3'
-      yellow: '#ddec79'
-      blue: '#77a5ed'
-      magenta: '#ec79dd'
-      cyan: '#79ecaf'
+      red: '#ec7990'
+      green: '#7990EC'
+      yellow: '#ecaf79'
+      blue: '#79b8ed'
+      magenta: '#ec79c9'
+      cyan: '#9ff2e1'
       white: '#efeff3'
   solarized: &solarized
     primary:
