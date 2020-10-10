@@ -57,5 +57,6 @@ polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 dunst &
 
 # Nightshift
-pkill redshift
-redshift -l 52.13:21.0 &
+# redshift really doesn't like being reset...
+#pkill redshift
+#redshift -l 52.13:21.0 &
