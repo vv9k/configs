@@ -1,0 +1,7 @@
+[user]
+	name = wojciechkepka
+	email = wojtek.kepka@protonmail.com
+[core]
+    editor = nvim
+[pull]
+	ff = only
