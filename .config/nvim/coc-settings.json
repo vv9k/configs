@@ -3,17 +3,8 @@
 	"/usr/bin/rust-analyzer",
 	"rust-analyzer.inlayHints.chainingHints": true,
 	"coc.preferences.formatOnSaveFiletypes": ["rust"],
+    "clangd.enabled": true,
 	"languageserver": {
-  		"ccls": {
-  			"command": "ccls",
-  		    	"filetypes": ["c", "cpp", "objc", "objcpp"],
-  		    	"rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-  		    	"initializationOptions": {
-  		    		"cache": {
-  		    	   	  "directory": "/tmp/ccls"
-  		    	   	}
-  		    	 }
-  		},
 		"haskell": {
 			"command": "hie-wrapper",
 			"args": ["--lsp"],

@@ -134,6 +134,7 @@ let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python'
 let g:python_highlight_all = 1
 hi! link pythonBuiltinType PreProc
+hi! link pythonOperator Statement
 "------------------------------------------------------------------------------"
 " Go
 "let g:go_def_mode='gopls'
