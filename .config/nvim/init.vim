@@ -59,6 +59,8 @@ Plug 'baskerville/vim-sxhkdrc'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'fatih/vim-go'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'rodjek/vim-puppet'
+Plug 'vim-python/python-syntax'
 "------------------------------------------------------------------------------"
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
@@ -130,6 +132,8 @@ let g:OmniSharp_server_use_mono = 1
 " Python
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python'
+let g:python_highlight_all = 1
+hi! link pythonBuiltinType PreProc
 "------------------------------------------------------------------------------"
 " Go
 "let g:go_def_mode='gopls'
