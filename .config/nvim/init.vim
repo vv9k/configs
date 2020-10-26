@@ -134,7 +134,7 @@ let g:python_highlight_all = 1
 let g:black_linelength = 120
 " Run black on file save
 autocmd BufWritePre *.py execute ':Black'
-hi! link pythonBuiltinType PreProc
+hi! link pythonBuiltinType LibraryType
 hi! link pythonOperator Statement
 "------------------------------------------------------------------------------"
 " Go
