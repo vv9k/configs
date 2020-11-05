@@ -248,3 +248,14 @@ nmap <C-l> <ESC>:BLines<CR>
 " symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+"################################################################################
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNCS ~~~~~~~~~~~~
+"################################################################################
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
