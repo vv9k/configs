@@ -50,6 +50,7 @@ alias update="yay -Syu && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q
 alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
 alias whatprovides="yay -Fy"
 alias cleanup="yay -Sc"
+alias night="redshift -l $(secret-tool lookup redshift location) &"
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
