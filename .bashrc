@@ -26,7 +26,7 @@ parse_git_branch() {
 #------------------------------------------------------------------------------#
 # Nord
 #export PS1="\[\e[38;5;6;1m\]vv \[\e[m\]\[\e[m\] | \[\e[38;5;6m\]\w\[\e[38;5;6m\]\$(parse_git_branch)\[\033[00m\] \[\e[m\]\[\e[38;5;6;1m\]\n=>\[\e[m\] " #nord
-export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export BAT_THEME="Nord"
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aliases ~~~~~
