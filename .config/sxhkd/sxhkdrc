@@ -14,7 +14,7 @@ super + s
 
 # Lockscreen
 ctrl + alt + l
-    dm-tool switch-to-greeter
+    light-locker-command -l
 
 # close app
 super + q
