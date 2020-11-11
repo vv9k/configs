@@ -249,6 +249,7 @@ nmap <C-l> <ESC>:BLines<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <F10> :call SynStack()<CR>
 "################################################################################
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNCS ~~~~~~~~~~~~
 "################################################################################
@@ -259,3 +260,9 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
