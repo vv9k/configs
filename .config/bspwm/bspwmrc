@@ -3,8 +3,8 @@
 # xrandr
 randr rotate
 
-bspc monitor HDMI-1 -d I II III
-bspc monitor DP-2 -d IV V VI
+bspc monitor HDMI-1 -d IV V VI
+bspc monitor DP-2 -d I II III
 
 
 bspc config border_width        1.5
@@ -21,12 +21,12 @@ bspc config focused_border_color "#d8dee8"
 bspc config normal_border_color "#2f343f"
 
 
-bspc rule -a Pidgin desktop=^6 state=floating
-bspc rule -a Rocket.Chat desktop=^6 state=floating
-bspc rule -a Thunderbird desktop=^5
-bspc rule -a firefox desktop=^4
-bspc rule -a Alacritty desktop=^1
+bspc rule -a Rocket.Chat desktop=^3
+bspc rule -a Thunderbird desktop=^2
+bspc rule -a firefox desktop=^1
+bspc rule -a Alacritty desktop=^4
 bspc rule -a Chromium state=floating
+bspc rule -a rdesktop state=floating
 
 ###############################################################################
 
