@@ -55,10 +55,9 @@ polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 # Notification server
 dunst &
 
-# Nightshift
-# redshift really doesn't like being reset...
-#pkill redshift
-#redshift -l 52.13:21.0 &
-
 # Lightdm locker
 light-locker &
+
+# Nightshift
+pkill redshift
+redshift -P -l 52.13:21.0 &
