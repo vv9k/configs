@@ -51,6 +51,7 @@ alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist
 alias whatprovides="yay -Fy"
 alias cleanup="yay -Sc"
 alias night="redshift -l $(secret-tool lookup redshift location) &"
+alias tmux="tmux -u" # utf-8 support
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
