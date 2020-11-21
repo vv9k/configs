@@ -27,7 +27,7 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fratajczak/one-monokai-vim'
-Plug 'wojciechkepka/xbliss-vim'
+Plug 'wojciechkepka/xbliss'
 "------------------------------------------------------------------------------"
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
