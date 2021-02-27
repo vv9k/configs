@@ -106,14 +106,14 @@ schemes:
       white: '#aeb3bb'
   xbliss: &xbliss
     primary:
-      background: '#2d2a3a'
+      background: '#323547'
       foreground: '#dee0e7'
       dim_foreground: '#535873'
     cursor:
-      text: '#2d2a3a'
+      text: '#323547'
       cursor: '#efeff3'
     vi_mode_cursor:
-      text: '#2d2a3a'
+      text: '#323547'
       cursor: '#efeff3'
     selection:
       text: CellForeground
@@ -126,9 +126,9 @@ schemes:
         background: '#434c5e'
         foreground: '#d8dee9'
     normal:
-      black: '#2d2a3a'
+      black: '#323547'
       red: '#ec7990'
-      green: '#7990EC'
+      green: '#90EC79'
       yellow: '#ecaf79'
       blue: '#7990ec'
       magenta: '#ec79c9'
