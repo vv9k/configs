@@ -55,13 +55,15 @@ Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'plasticboy/vim-markdown'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'fatih/vim-go'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'psf/black', {'branch': 'stable'}
 Plug 'vim-python/python-syntax'
+Plug 'lervag/vimtex'
+Plug 'Kogia-sima/sailfish', { 'rtp': 'syntax/vim' }
+Plug 'pearofducks/ansible-vim'
 "------------------------------------------------------------------------------"
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
@@ -162,16 +164,18 @@ set tabstop=4
 set expandtab
 set smarttab
 "------------------------------------------------------------------------------"
-" For tmux over ssh
-set ttyfast
-"------------------------------------------------------------------------------"
 " Use short tabs for html and css
+filetype on
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType sailfish setlocal shiftwidth=2 softtabstop=2 expandtab
 "------------------------------------------------------------------------------"
 " Display line number
 set nu
 set splitright
+"------------------------------------------------------------------------------"
+" For tmux over ssh
+set ttyfast
 "------------------------------------------------------------------------------"
 " Fold code
 set foldmethod=indent
@@ -186,6 +190,10 @@ if has('clipboard')
         set clipboard=unnamed
     endif
 endif
+"------------------------------------------------------------------------------"
+" Set ansible files to correct type
+au BufRead,BufNewFile */ansible/*.yaml set filetype=yaml.ansible
+"------------------------------------------------------------------------------"
 "##############################################################################"
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ KEYBINDINGS ~~~~~
 "##############################################################################"
