@@ -46,10 +46,10 @@ alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $
 #------------------------------------------------------------------------------#
 # Util
 alias theme="$HOME/dev/scripts/theme.sh"
-alias update="yay -Syu && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
+alias update="paru && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
 alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
-alias whatprovides="yay -Fy"
-alias cleanup="yay -Sc"
+alias whatprovides="paru -Fy"
+alias cleanup="paru -Sc"
 alias night="redshift -l $(secret-tool lookup redshift location) &"
 alias tmux="tmux -u" # utf-8 support
 ################################################################################
