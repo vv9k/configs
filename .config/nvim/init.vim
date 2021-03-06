@@ -82,21 +82,21 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 "set background=light
 let ayucolor="dark"
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='medium'
 syntax on
 "------------------------------------------------------------------------------"
 " Colorscheme
 "colorscheme nord
 "colorscheme ayu
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme solarized8_flat
 "colorscheme one-monokai
 "colorscheme challenger_deep
 "colorscheme tequila-sunrise
 "colorscheme xcodedark
 "colorscheme edge
-colorscheme xbliss
+"colorscheme xbliss
 "------------------------------------------------------------------------------"
 " Fonts
 " Make airline use powerline fonts
