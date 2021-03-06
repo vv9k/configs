@@ -127,8 +127,8 @@ let g:rust_clip_command = 'xclip -selection clipboard'
 let g:OmniSharp_server_use_mono = 1
 "------------------------------------------------------------------------------"
 " Python
-let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_highlight_all = 1
 let g:black_linelength = 120
 " Run black on file save
