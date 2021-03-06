@@ -1,4 +1,3 @@
-
 "##############################################################################"
 "                                      _                                       " 
 "                                     (_)                                      " 
@@ -19,7 +18,6 @@ Plug 'tpope/vim-fugitive'
 "------------------------------------------------------------------------------"
 " ColorSchemes
 Plug 'sainnhe/edge'
-Plug 'wojciechkepka/tequila-sunrise.vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
