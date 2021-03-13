@@ -85,7 +85,7 @@ set background=dark
 "set background=light
 let ayucolor="dark"
 let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_contrast_light='medium'
+let g:gruvbox_contrast_light='hard'
 syntax on
 "------------------------------------------------------------------------------"
 " Colorscheme
