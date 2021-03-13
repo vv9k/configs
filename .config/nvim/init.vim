@@ -173,6 +173,13 @@ autocmd FileType sailfish setlocal shiftwidth=2 softtabstop=2 expandtab
 " Display line number
 set nu
 set splitright
+
+" Display absolute on not focused files
+augroup numbertoggle
+    autocmd BufEnter,FocusGained,InsertLeave * :set rnu
+    autocmd BufLeave,FocusLost,InsertEnter   * :set nornu
+augroup END
+
 "------------------------------------------------------------------------------"
 " For tmux over ssh
 set ttyfast
