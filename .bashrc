@@ -48,6 +48,8 @@ alias scpecows="scp $(secret-tool lookup vps ecows)"
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
 export GOPATH="$HOME/go/"
+export CALIBRE_USE_DARK_PALETTE=1
+
 # Fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Starship shell
