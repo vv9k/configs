@@ -228,24 +228,20 @@ inoremap <C-k> <up>
 inoremap <C-l> <right>
 "------------------------------------------------------------------------------"
 " Quick text divider
-inoremap <F2> ################################################################################
+inoremap <F2> ####################################################################################################
 inoremap <F3> ########################################
 inoremap <F4> --------------------------------------------------------------------------------
 "------------------------------------------------------------------------------"
 " Coc keybindings
-nmap <F1> <Plug>(coc-diagnostic-prev-error)
-nmap <F2> <Plug>(coc-diagnostic-next-error)
+nnoremap <Space>ep <Plug>(coc-diagnostic-prev-error)
+nmap <Space>en <Plug>(coc-diagnostic-next-error)
 nmap <F3> <Plug>(coc-diagnostic-next)
-nmap <F4> <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
+nmap <Space>dd <ESC>:w<CR>:vsplit<CR> <Plug>(coc-definition)
 "------------------------------------------------------------------------------"
 " Toggle code navigation
 " remember to install rusty-tags with it
 " cargo install rusty-tags
 nmap <F8> :TagbarToggle<CR>
-"------------------------------------------------------------------------------"
-" Run rust and python
-noremap <F5> <ESC>:w<CR>:!python %<CR>
-noremap <F6> <ESC>:w<CR>:vsplit term://cargo run<CR>
 "------------------------------------------------------------------------------"
 " Toggle comments
 nmap <C-_> <leader>c<Space>
@@ -259,6 +255,26 @@ nmap <C-l> <ESC>:BLines<CR>
 "------------------------------------------------------------------------------"
 " symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+"------------------------------------------------------------------------------"
+" git shortcuts
+nnoremap <Space>gp <ESC>:Git push
+nnoremap <Space>gc <ESC>:Git commit
+nnoremap <Space>gg <ESC>:Git commit .<CR>
+nnoremap <Space>ga <ESC>:Git commit --amend
+nnoremap <Space>gd <ESC>:Git diff<CR>
+nnoremap <Space>gs <ESC>:Git status<CR>
+nnoremap <Space>gl <ESC>:Git log<CR>
+"------------------------------------------------------------------------------"
+" cargo shortcuts
+nnoremap <Space>cc <ESC>:Cargo check<CR>
+nnoremap <Space>cb <ESC>:Cargo build<CR>
+nnoremap <Space>cr <ESC>:Cargo run
+nnoremap <Space>ct <ESC>:Cargo test<CR>
+"------------------------------------------------------------------------------"
+" refresh vim
+nnoremap <F5> <ESC>:source $MYVIMRC<CR>
+
+
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <F10> :call SynStack()<CR>
