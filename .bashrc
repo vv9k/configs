@@ -26,7 +26,7 @@ alias vim='nvim'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
 #------------------------------------------------------------------------------#
 # Remote
-alias sshpi='ssh -p 666 root@pytlas'
+alias sshpi='ssh pivvo'
 alias work="ssh wojtek@10.92.2.206"
 alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
@@ -39,6 +39,11 @@ alias whatprovides="paru -Fy"
 alias cleanup="paru -Sc"
 alias night="redshift -l $(secret-tool lookup redshift location) &"
 alias tmux="tmux -u" # utf-8 support
+alias testvm="qemu-system-x86_64 -cdrom Downloads/archlinux-2021.02.01-x86_64.iso -boot order=d -drive file=~/test_arch,format=raw -m 6G -smp 4 -nic user,hostfwd=tcp::10022-:22"
+alias sshvm="ssh root@localhost -p 10022"
+alias ecowsvps="ssh $(secret-tool lookup vps ecows)"
+alias scpecows="scp $(secret-tool lookup vps ecows)"
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
