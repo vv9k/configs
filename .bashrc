@@ -23,7 +23,6 @@ export BAT_THEME="gruvbox-dark"
 alias cat='bat'
 alias ls='exa --icons'
 alias vim='nvim'
-alias diff='diff --color=always -y'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
 #------------------------------------------------------------------------------#
 # Remote
