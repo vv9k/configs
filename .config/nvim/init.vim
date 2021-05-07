@@ -19,11 +19,9 @@ Plug 'tpope/vim-fugitive'
 "------------------------------------------------------------------------------"
 " ColorSchemes
 Plug 'sainnhe/edge'
-Plug 'wojciechkepka/tequila-sunrise.vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fratajczak/one-monokai-vim'
@@ -56,7 +54,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'baskerville/vim-sxhkdrc'
-Plug 'itchyny/vim-haskell-indent'
 Plug 'fatih/vim-go'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'psf/black', {'branch': 'stable'}
@@ -94,8 +91,6 @@ syntax on
 colorscheme gruvbox
 "colorscheme solarized8
 "colorscheme one-monokai
-"colorscheme challenger_deep
-"colorscheme tequila-sunrise
 "colorscheme xcodedark
 "colorscheme edge
 "colorscheme xbliss
