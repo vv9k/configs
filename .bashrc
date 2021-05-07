@@ -32,7 +32,6 @@ alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
 #------------------------------------------------------------------------------#
 # Util
-alias theme="$HOME/dev/scripts/theme.sh"
 alias update="paru && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
 alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
 alias whatprovides="paru -Fy"
