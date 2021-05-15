@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'
 "------------------------------------------------------------------------------"
 " ColorSchemes
 Plug 'sainnhe/edge'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arzg/vim-colors-xcode'
 Plug 'ayu-theme/ayu-vim'
