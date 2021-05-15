@@ -38,7 +38,7 @@ alias whatprovides="paru -Fy"
 alias cleanup="paru -Sc"
 alias night="redshift -l $(secret-tool lookup redshift location) &"
 alias tmux="tmux -u" # utf-8 support
-alias testvm="qemu-system-x86_64 -cdrom Downloads/archlinux-2021.02.01-x86_64.iso -boot order=d -drive file=~/test_arch,format=raw -m 6G -smp 4 -nic user,hostfwd=tcp::10022-:22"
+alias testvm="qemu-system-x86_64 -enable-kvm -cdrom ~/Downloads/archlinux-2021.05.01-x86_64.iso -boot order=d -drive file=~/test_arch,format=raw -m 6G -smp 6 -nic user,hostfwd=tcp::10022-:22"
 alias sshvm="ssh root@localhost -p 10022"
 alias ecowsvps="ssh $(secret-tool lookup vps ecows)"
 alias scpecows="scp $(secret-tool lookup vps ecows)"
