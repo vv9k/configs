@@ -27,31 +27,11 @@ super + f
     bspc desktop -l next
 
 ## focus or send to the given desktop
-super + shift + 1
-    bspc node -d ^4
-super + shift + 2
-    bspc node -d ^5
-super + shift + 3
-    bspc node -d ^6
-super + shift + 4
-    bspc node -d ^1
-super + shift + 5
-    bspc node -d ^2
-super + shift + 6
-    bspc node -d ^3
+super + shift + {1-6}
+    bspc node -d ^{1-6}
 
-super + 1
-    bspc desktop -f ^4
-super + 2
-    bspc desktop -f ^5
-super + 3
-    bspc desktop -f ^6
-super + 4
-    bspc desktop -f ^1
-super + 5
-    bspc desktop -f ^2
-super + 6
-    bspc desktop -f ^3
+super + {1-6}
+    bspc desktop -f ^{1-6}
 
 ## send the window in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
