@@ -29,6 +29,7 @@ Plug 'wojciechkepka/xbliss', { 'branch': 'new-colors' }
 Plug 'wojciechkepka/vim-github-dark'
 "------------------------------------------------------------------------------"
 " GUI enhancements
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
@@ -85,6 +86,10 @@ let ayucolor="dark"
 let g:gh_color = "soft"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='hard'
+
+let g:lightline = {
+    \ 'colorscheme': 'gruvbox',
+    \ }
 syntax on
 
 "------------------------------------------------------------------------------"
