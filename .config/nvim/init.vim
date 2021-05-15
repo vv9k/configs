@@ -26,6 +26,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fratajczak/one-monokai-vim'
 Plug 'wojciechkepka/xbliss', { 'branch': 'new-colors' }
+Plug 'wojciechkepka/vim-github-dark'
 "------------------------------------------------------------------------------"
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -81,12 +82,15 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 "set background=light
 let ayucolor="dark"
+let g:gh_color = "soft"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='hard'
 syntax on
+
 "------------------------------------------------------------------------------"
 " Colorscheme
 "colorscheme nord
+"colorscheme ghdark
 "colorscheme ayu
 colorscheme gruvbox
 "colorscheme solarized8
