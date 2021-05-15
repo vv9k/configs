@@ -8,7 +8,7 @@ font:
   italic:
     family: Fira Code
     style: Italic
-  size: 10
+  size: 11
 schemes:
   ayu: &ayu
     primary:
@@ -59,6 +59,7 @@ schemes:
       # hard contrast: background = '0x1d2021'
       #background: '0x1d2021'
       background: '0x282828'
+      #background: '0x32302f'
       # soft contrast: background = '0x32302f'
       foreground: '0xebdbb2'
     normal:
@@ -79,6 +80,28 @@ schemes:
       magenta: '0xd3869b'
       cyan:    '0x8ec07c'
       white:   '0xebdbb2'
+  ghdark: &ghdark
+    primary:
+      background: '0x161b22'
+      foreground: '0xc6cdd5'
+    normal:
+      black:   '0x0d1117'
+      red:     '0xfa7970'
+      green:   '0x7ce38b'
+      yellow:  '0xfaa356'
+      blue:    '0x77bdfb'
+      magenta: '0xcea5fb'
+      cyan:    '0x77bdfb'
+      white:   '0xecf2f8'
+    bright:
+      black:   '0x0d1117'
+      red:     '0xfa7970'
+      green:   '0x7ce38b'
+      yellow:  '0xfaa356'
+      blue:    '0xa2d2fb'
+      magenta: '0xcea5fb'
+      cyan:    '0xa2d2fb'
+      white:   '0xecf2f8'
   nord: &nord
     primary:
       background: '#2e3440'
@@ -179,7 +202,7 @@ schemes:
       magenta: '0x6c71c4'
       cyan:    '0x93a1a1'
       white:   '0xfdf6e3'
-  solarized_dark: &solarized_dark
+  solarized: &solarized
     primary:
       background: '0x002b36'
       foreground: '0x839496'
