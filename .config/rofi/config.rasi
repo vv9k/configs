@@ -1,18 +1,23 @@
 configuration {
     fullscreen: true;
-    show-icons: false;
+    show-icons: true;
     font: "Fira Code 16";
-    modi: "run";
-    combi-modi: "run";
-    display-combi: "cmd";
-    display-run: "";
+    combi-modi: "window,run";
+    display-combi: "command";
+    display-run: ">>";
     lines: 5;
 }
 
 * {
-  background-color: #282C33;
-  border-color: #2e343f;
-  text-color: #8ca0aa;
+/*background-color: #0d1117;/*ghdark*/*/
+/*border-color: #2e343f;/*ghdark*/*/
+/*color: #ecf2f8;/*ghdark*/*/
+/*background-color: #282c33;/*common*/*/
+/*border-color: #2e343f;/*common*/*/
+/*color: #8ca0aa;/*common*/*/
+  background-color: #1d2021;/*gruvbox*/
+  border-color: #928374;/*gruvbox*/
+  color: #fbf1c7;/*gruvbox*/
   spacing: 0;
   width: 512px;
 }
@@ -29,9 +34,6 @@ prompt {
 }
 
 textbox {
-  background-color: #2e343f;
-  border: 0 0 1px 0;
-  border-color: #282C33;
   padding: 8px 16px;
 }
 
@@ -52,5 +54,9 @@ element {
 }
 
 element selected {
-  background-color: #2e343f;
+  background-color: #3c3836;/*gruvbox*/
+/*background-color: #2e343f;/*common*/*/
+/*background-color: #a2d2fb;/*ghdark*/*/
+/*color: #21262d;/*ghdark*/*/
+  color: #8ec07c;/*gruvbox*/
 }
