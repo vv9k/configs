@@ -60,6 +60,7 @@ Plug 'fatih/vim-go'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'psf/black', {'branch': 'stable'}
 Plug 'vim-python/python-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'lervag/vimtex'
 Plug 'Kogia-sima/sailfish', { 'rtp': 'syntax/vim' }
 Plug 'pearofducks/ansible-vim'
