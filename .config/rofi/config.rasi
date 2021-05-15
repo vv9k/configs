@@ -15,9 +15,12 @@ configuration {
 /*background-color: #282c33;/*common*/*/
 /*border-color: #2e343f;/*common*/*/
 /*color: #8ca0aa;/*common*/*/
-  background-color: #1d2021;/*gruvbox*/
+  background-color: #282828;/*gruvbox*/
   border-color: #928374;/*gruvbox*/
   color: #fbf1c7;/*gruvbox*/
+/*background-color: #002b36;/*solarized*/*/
+/*border-color: #586e75;/*solarized*/*/
+/*color: #839496;/*solarized*/*/
   spacing: 0;
   width: 512px;
 }
@@ -31,14 +34,16 @@ inputbar {
 prompt {
   padding: 16px;
   border: 0 1px 0 0;
-}
-
-textbox {
-  padding: 8px 16px;
+/*color: #cb4b16;/*solarized*/*/
+/*color: #fa7970;/*ghdark*/*/
+  color: #fb4934;/*gruvbox*/
 }
 
 entry {
   padding: 16px;
+/*color: #eee8d5;/*solarized*/*/
+/*color: #ecf2f8;/*ghdark*/*/
+  color: #b8bb26;/*gruvbox*/
 }
 
 listview {
@@ -51,12 +56,16 @@ listview {
 element {
   border: 0 0 1px 0;
   padding: 16px;
+/*color: #a2d2fb;/*ghdark*/*/
+  color: #fbf1c7;/*gruvbox*/
 }
 
 element selected {
   background-color: #3c3836;/*gruvbox*/
 /*background-color: #2e343f;/*common*/*/
-/*background-color: #a2d2fb;/*ghdark*/*/
-/*color: #21262d;/*ghdark*/*/
+/*background-color: #073642;/*solarized*/*/
+/*background-color: #21262d;/*ghdark*/*/
+/*color: #77bdfb;/*ghdark*/*/
   color: #8ec07c;/*gruvbox*/
+/*color: #2aa198;/*solarized*/*/
 }
