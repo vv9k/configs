@@ -17,3 +17,11 @@ function syn_stack()
   print(dump(out))
 end
 
+local function t(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+function _G.smart_tab()
+    print(vim.fn.pumvisible())
+    return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
+end
