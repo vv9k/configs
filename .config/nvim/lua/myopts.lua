@@ -1,7 +1,6 @@
 function nvim_create_augroups(definitions)
   for group_name, definition in pairs(definitions) do
     vim.api.nvim_command('augroup '..group_name)
-    vim.api.nvim_command('autocmd!')
     for _, def in ipairs(definition) do
       local command = table.concat(vim.tbl_flatten{'autocmd', def}, ' ')
       vim.api.nvim_command(command)
@@ -64,18 +63,19 @@ vim.o.guifont = 'Fira Code:h11'
 ------------------------------------------------------------------------------
 -- augroups
 ------------------------------------------------------------------------------
+vim.cmd('filetype on')
 local augroups = {
-    short_tab = {
-        {'FileType', 'html', 'setlocal shiftwidth=2 softabstop=2 expandtab'},
-        {'FileType', 'css', 'setlocal shiftwidth=2 softabstop=2 expandtab'},
-        {'FileType', 'sailfish', 'setlocal shiftwidth=2 softabstop=2 expandtab'},
-        {'FileType', 'lua', 'setlocal shiftwidth=2 softabstop=2 expandtab'},
-    },
-    -- Display absolute numbers on not focused files
-    number_toggle = {
-        {'BufEnter,FocusGained,InsertLeave', '*', ':set rnu'},
-        {'BufLeave,FocusLost,InsertEnter', '*', ':set nornu'},
-    }
+  short_tab = {
+    {'FileType', 'html', 'setlocal shiftwidth=2 expandtab'},
+    {'FileType', 'css', 'setlocal', 'shiftwidth=2 expandtab'},
+    {'FileType', 'sailfish', 'setlocal shiftwidth=2 expandtab'},
+    {'FileType', 'lua', 'setlocal shiftwidth=2 expandtab'},
+  },
+  -- Display absolute numbers on not focused files
+  number_toggle = {
+    {'BufEnter,FocusGained,InsertLeave', '*', ':set rnu'},
+    {'BufLeave,FocusLost,InsertEnter', '*', ':set nornu'},
+  }
 }
 
 nvim_create_augroups(augroups)
@@ -83,9 +83,9 @@ nvim_create_augroups(augroups)
 -- Use system clipboard for yanks
 ------------------------------------------------------------------------------
 if vim.fn.has('clipboard') == 1 then
-    if vim.fn.has('unnamedplus') == 1 then
-        vim.o.clipboard = 'unnamed,unnamedplus'
-    else
-        vim.o.clipboard = 'unnamed'
-    end
+  if vim.fn.has('unnamedplus') == 1 then
+    vim.o.clipboard = 'unnamed,unnamedplus'
+  else
+    vim.o.clipboard = 'unnamed'
+  end
 end
