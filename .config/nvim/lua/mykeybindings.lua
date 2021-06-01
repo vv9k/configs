@@ -61,7 +61,7 @@ vim.api.nvim_set_keymap('n', '<F5>', ':source $MYVIMRC<cr>', {noremap = true})
 ------------------------------------------------------------------------------
 -- Display highlight groups under the cursor
 ------------------------------------------------------------------------------
-vim.api.nvim_set_keymap('n', '<F10>', ':lua syn_stack()<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<F10>', ':lua syn_stack()<cr>:TSHighlightCapturesUnderCursor<cr>', {noremap = true})
 ------------------------------------------------------------------------------
 -- Dividers
 ------------------------------------------------------------------------------
