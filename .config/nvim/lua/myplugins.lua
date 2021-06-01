@@ -38,6 +38,8 @@ paq {'majutsushi/tagbar'}
 ------------------------------------------------------------------------------
 -- Syntactic language support
 ------------------------------------------------------------------------------
+paq {'nvim-treesitter/nvim-treesitter'}
+paq {'nvim-treesitter/playground'}
 paq {'cespare/vim-toml'}
 paq {'stephpy/vim-yaml'}
 paq {'rust-lang/rust.vim'}
