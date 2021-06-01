@@ -102,6 +102,28 @@ schemes:
       magenta: '0xcea5fb'
       cyan:    '0xa2d2fb'
       white:   '0xecf2f8'
+  bogster: &bogster
+    primary:
+      background: '0x161c23'
+      foreground: '0xe5ded6'
+    normal:
+      black:   '0x161c23'
+      red:     '0xdc597f'
+      green:   '0x7fdc59'
+      yellow:  '0xdc7759'
+      blue:    '0x59c0dc'
+      magenta: '0xdc59c0'
+      cyan:    '0x59dcb7'
+      white:   '0xc6b8ad'
+    bright:
+      black:   '0x232d38'
+      red:     '0xdc597f'
+      green:   '0x7fdc59'
+      yellow:  '0xdcb659'
+      blue:    '0x59dcd8'
+      magenta: '0xdc59c0'
+      cyan:    '0x59dcb7'
+      white:   '0xe5ded6'
   nord: &nord
     primary:
       background: '#2e3440'
