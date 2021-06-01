@@ -21,6 +21,9 @@ configuration {
 /*background-color: #002b36;/*solarized*/*/
 /*border-color: #586e75;/*solarized*/*/
 /*color: #839496;/*solarized*/*/
+/*background-color: #161c23;/*bogster*/*/
+/*border-color: #536984;/*bogster*/*/
+/*color: #e5ded6;/*bogster*/*/
   spacing: 0;
   width: 512px;
 }
@@ -36,6 +39,7 @@ prompt {
   border: 0 1px 0 0;
 /*color: #cb4b16;/*solarized*/*/
 /*color: #fa7970;/*ghdark*/*/
+/*color: #dcb659;/*bogster*/*/
   color: #fb4934;/*gruvbox*/
 }
 
@@ -43,6 +47,7 @@ entry {
   padding: 16px;
 /*color: #eee8d5;/*solarized*/*/
 /*color: #ecf2f8;/*ghdark*/*/
+/*color: #e5ded6;/*bogster*/*/
   color: #b8bb26;/*gruvbox*/
 }
 
@@ -57,6 +62,7 @@ element {
   border: 0 0 1px 0;
   padding: 16px;
 /*color: #a2d2fb;/*ghdark*/*/
+/*color: #59c0dc;/*bogster*/*/
   color: #fbf1c7;/*gruvbox*/
 }
 
@@ -66,6 +72,8 @@ element selected {
 /*background-color: #073642;/*solarized*/*/
 /*background-color: #21262d;/*ghdark*/*/
 /*color: #77bdfb;/*ghdark*/*/
+/*background-color: #232d38;/*bogster*/*/
+/*color: #59dcb7;/*bogster*/*/
   color: #8ec07c;/*gruvbox*/
 /*color: #2aa198;/*solarized*/*/
 }
