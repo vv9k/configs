@@ -1,6 +1,0 @@
-color info  black green
-color listfocus black blue
-color listfocus_unread red blue bold
-
-browser "firefox %u"
-
