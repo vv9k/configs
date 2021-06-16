@@ -2,7 +2,6 @@ if vim.fn.has("termguicolors") then
   vim.o.termguicolors = true
 end
 
-vim.o.t_Co = '256'
 vim.o.background = 'dark'
 --vim.o.background = 'light'
 
