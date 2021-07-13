@@ -37,6 +37,9 @@ bspc rule -a rdesktop state=floating
 
 ###############################################################################
 
+# Fixes reparenting issues with java windows like clion
+wmname LG3D
+
 # Keybindings
 pkill sxhkd
 sxhkd &
