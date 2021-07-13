@@ -84,7 +84,7 @@ nvim_create_augroups(augroups)
 ------------------------------------------------------------------------------
 if vim.fn.has('clipboard') == 1 then
   if vim.fn.has('unnamedplus') == 1 then
-    vim.o.clipboard = 'unnamed,unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
   else
     vim.o.clipboard = 'unnamed'
   end
