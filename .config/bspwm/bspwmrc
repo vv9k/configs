@@ -5,7 +5,7 @@
 randr
 
 bspc monitor HDMI-1 -d IV V VI
-bspc monitor DP-2 -d I II III
+bspc monitor DP-3 -d I II III
 
 
 bspc config border_width        1.5
