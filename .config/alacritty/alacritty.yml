@@ -1,14 +1,14 @@
 font:
   normal:
-    family: Fira Code
-    style: Retina
+    family: Fira Code Retina
+    style: Normal
   bold:
     family: Fira Code
     style: Bold
   italic:
     family: Fira Code
     style: Italic
-  size: 11
+  size: 9
 schemes:
   ayu: &ayu
     primary:
