@@ -31,6 +31,16 @@ alias work="ssh -Y wojtek@10.92.2.206"
 alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
 #------------------------------------------------------------------------------#
+# Git
+alias gap='git commit --amend .'
+alias ga='git commit --amend'
+alias gc='git commit'
+alias gl='git log'
+alias gs='git status'
+alias gpp='git push --force'
+alias gm='git checkout master'
+alias gt='git stash'
+#------------------------------------------------------------------------------#
 # Util
 alias update="paru && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
 alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
