@@ -58,6 +58,7 @@ alias scpecows="scp $(secret-tool lookup vps ecows)"
 ################################################################################
 export GOPATH="$HOME/go/"
 export CALIBRE_USE_DARK_PALETTE=1
+export EDITOR="nvim"
 
 # Fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
