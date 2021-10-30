@@ -17,7 +17,6 @@ vim.api.nvim_set_keymap('', '<C-k>', ':NERDTreeToggle<cr>', {})
 -- Tagbar
 ------------------------------------------------------------------------------
 vim.api.nvim_set_keymap('', '<F8>', ':TagbarToggle<cr>', {})
-
 ------------------------------------------------------------------------------
 -- Disable arrow keys in normal mode
 ------------------------------------------------------------------------------
@@ -51,9 +50,10 @@ vim.api.nvim_set_keymap('n', '<Space>gl', '<ESC>:Git log<cr>', {noremap = true})
 -- Cargo shortcuts
 ------------------------------------------------------------------------------
 vim.api.nvim_set_keymap('n', '<Space>cc', '<ESC>:Cargo check<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Space>cl', '<ESC>:Cargo clippy --all-features --all-targets -- -Dclippy::all<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>cb', '<ESC>:Cargo build<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>cr', '<ESC>:Cargo run<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Space>ct', '<ESC>:Cargo test<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Space>ct', '<ESC>:Cargo test --examples --all-features --all-targets -- --nocapture<cr>', {noremap = true})
 ------------------------------------------------------------------------------
 -- Refresh configuration
 ------------------------------------------------------------------------------
