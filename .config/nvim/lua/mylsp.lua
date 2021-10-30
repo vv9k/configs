@@ -4,10 +4,7 @@ local compe = require('compe')
 
 local servers = {
   'gopls',
-  'dockerls',
-  'tsserver',
   'bashls',
-  'cmake',
   'pyright',
   'rust_analyzer',
   'clangd'
@@ -97,29 +94,23 @@ else
   print('Unsupported system for sumneko')
 end
 
-local sumneko_root_path = vim.fn.stdpath('cache')..'/lspconfig/sumneko_lua/lua-language-server'
-local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
+local sumneko_binary_path = vim.fn.exepath('lua-language-server')
+local sumneko_root_path = "/usr/lib/lua-language-server"
 
 nvim_lsp['sumneko_lua'].setup {
   on_attach = on_attach,
   capabilities = lsp_status.capabilities,
-  cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'},
+  cmd = {sumneko_binary_path, '-E', sumneko_root_path .. '/main.lua'},
   settings = {
     Lua = {
       diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+          globals = {'vim'},
       },
       workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = {
-          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-          [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-        },
+          library = vim.api.nvim_get_runtime_file("", true),
       },
-      -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
-        enable = false,
+          enable = false,
       },
     },
   },
