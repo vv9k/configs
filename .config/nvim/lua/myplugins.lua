@@ -51,3 +51,9 @@ paq {'vim-python/python-syntax'}
 paq {'pangloss/vim-javascript'}
 paq {'lervag/vimtex'}
 paq {'pearofducks/ansible-vim'}
+------------------------------------------------------------------------------
+-- File search
+------------------------------------------------------------------------------
+paq {'ibhagwan/fzf-lua'}
+paq {'vijaymarupudi/nvim-fzf'}
+paq {'kyazdani42/nvim-web-devicons'}
