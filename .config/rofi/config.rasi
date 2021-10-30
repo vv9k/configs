@@ -1,7 +1,7 @@
 configuration {
     fullscreen: true;
     show-icons: true;
-    font: "Fira Code 16";
+    font: "JetBrains Mono 16";
     combi-modi: "window,run";
     display-combi: "command";
     display-run: ">>";

@@ -1,12 +1,12 @@
 font:
   normal:
-    family: Fira Code Retina
+    family: JetBrains Mono
     style: Normal
   bold:
-    family: Fira Code
+    family: JetBrains Mono
     style: Bold
   italic:
-    family: Fira Code
+    family: JetBrains Mono
     style: Italic
   size: 9
 schemes:
