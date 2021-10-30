@@ -25,13 +25,13 @@ configuration {
 /*border-color: #536984;/*bogster*/*/
 /*color: #e5ded6;/*bogster*/*/
   spacing: 0;
-  width: 512px;
+  width: 768px;
 }
 
 inputbar {
   border: 0 0 1px 0;
   children: [prompt,entry];
-  padding: 300 0 0 600;
+  padding: 0 0 0 0;
 }
 
 prompt {
