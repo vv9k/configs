@@ -17,3 +17,4 @@ vim.g.airline_powerline_fonts = 1
 --vim.cmd('colorscheme ayu')
 vim.cmd('colorscheme gruvbox')
 --vim.cmd('colorscheme solarized8')
+--vim.cmd('colorscheme onedark')

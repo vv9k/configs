@@ -13,6 +13,7 @@ paq {'ayu-theme/ayu-vim'}
 paq {'arcticicestudio/nord-vim'}
 paq {'wojciechkepka/vim-github-dark'}
 paq {'wojciechkepka/bogster'}
+paq {'joshdick/onedark.vim'}
 ------------------------------------------------------------------------------
 -- LSP
 ------------------------------------------------------------------------------
