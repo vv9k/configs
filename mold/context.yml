@@ -1,0 +1,292 @@
+namespaces:
+  - name: GLOBAL
+    variables:
+      polybar.base-bar-bg: ${colors.common-bg}
+      polybar.ram.fg-0: ${colors.green}
+      polybar.ram.fg-1: ${colors.green}
+      polybar.ram.fg-2: ${colors.yellow}
+      polybar.ram.fg-3: ${colors.red}
+      polybar.ram.fg-empty: ${colors.grey}
+      polybar.volume.label-muted-fg: ${colors.red}
+      polybar.datetime.fg: ${colors.orange} 
+      polybar.bspwm.label-focused-underline: ${colors.grey}
+      polybar.bspwm.label-focused-foreground: ${colors.grey}
+
+      rofi.common.bg-color: "#282c33"
+      rofi.common.fg-color: "#8ca0aa"
+      rofi.common.border-color: "#2e343f"
+      rofi.element.selected.normal.fg-color: "color: #2e343f;"
+      rofi.element.selected.active.fg-color: "color: #2e343f;"
+
+      _font_: JetBrains Mono
+      _font_size_: '11'
+
+      alacritty.font: "{%_font_%}"
+      alacritty.font-size: "{%_font_size_%}"
+
+      _gtk_theme_: Aritim-Dark
+      gtk3.font.name: "{%_font_%}"
+      gtk3.font.size: "{%_font_size_%}"
+      gtk3.theme.name: "{%_gtk_theme_%}"
+      gtk3.icon-theme.name: "Papirus-Dark"
+      gtk2.theme.name: "{%_gtk_theme_%}"
+      gtk2.font.name: "{%_font_%}"
+      gtk2.font.size: "{%_font_size_%}"
+
+      #bspwm.screen.init: randr
+      bspwm.screen.init: randr rotate
+
+      _wallpapers_path_: /usr/share/wallpapers
+
+      vim.bg.light_or_dark: dark
+
+  - name: gruvbox
+    variables:
+      polybar.base-bar-bg: ${colors.gruv-bg}
+      polybar.base-bar-fg: "foreground = ${colors.gruv-aqua}"
+      polybar.ram.fg-0: ${colors.gruv-green}
+      polybar.ram.fg-1: ${colors.gruv-green}
+      polybar.ram.fg-2: ${colors.gruv-yellow}
+      polybar.ram.fg-3: ${colors.gruv-red}
+      polybar.volume.label-muted-fg: ${colors.gruv-red}
+      polybar.datetime.fg: ${colors.gruv-purple} 
+      polybar.bspwm.label-focused-underline: ${colors.gruv-purple}
+      polybar.bspwm.label-focused-foreground: ${colors.gruv-purple}
+      tmux.bg: "'#1d2021'"
+      tmux.fg: "'#3c3836'"
+      tmux.inactive: "'#b8bb26'"
+      tmux.active: "'#fb4934'"
+      tmux.side: "'#8ec07c'"
+      rofi.common.bg-color: "#282828"
+      rofi.common.fg-color: "#fbf1c7"
+      rofi.common.border-color: "#928374"
+      rofi.prompt.fg-color: "color: #fb4934;"
+      rofi.entry.fg-color: "color: #b8bb26;"
+      rofi.entry.normal.alternate.fg-color: "color: #b8bb26;"
+      rofi.element.normal.normal.fg-color: "color: #fbf1c7;"
+      rofi.element.normal.normal.bg-color: "background-color: #282828;"
+      rofi.element.normal.active.fg-color: "color: #fbf1c7;"
+      rofi.element.normal.active.bg-color: "background-color: #282828;"
+      rofi.element.alternate.normal.fg-color: "color: #fbf1c7;"
+      rofi.element.alternate.normal.bg-color: "background-color: #282828;"
+      rofi.element.selected.normal.bg-color: "background-color: #8ec07c;"
+      rofi.element.selected.normal.fg-color: "color: #3c3836;"
+      rofi.element.selected.active.bg-color: "background-color: #8ec07c;"
+      rofi.element.selected.active.fg-color: "color: #3c3836;"
+      alacritty.theme: gruvbox
+      gtk3.theme.name: gruvbox-gtk
+      wallpaper.screen0: "{%_wallpapers_path_%}/gruvbox_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/gruvbox.png"
+      vim.bg.light_or_dark: dark
+      vim.colorscheme: gruvbox
+  - name: gruvbox_light
+    variables:
+      polybar.base-bar-bg: ${colors.gruv-bg}
+      polybar.base-bar-fg: "foreground = ${colors.gruv-aqua}"
+      polybar.ram.fg-0: ${colors.gruv-green}
+      polybar.ram.fg-1: ${colors.gruv-green}
+      polybar.ram.fg-2: ${colors.gruv-yellow}
+      polybar.ram.fg-3: ${colors.gruv-red}
+      polybar.volume.label-muted-fg: ${colors.gruv-red}
+      polybar.datetime.fg: ${colors.gruv-purple} 
+      polybar.bspwm.label-focused-underline: ${colors.gruv-purple}
+      polybar.bspwm.label-focused-foreground: ${colors.gruv-purple}
+      rofi.common.bg-color: "#fbf1c7"
+      rofi.common.border-color: "#282828"
+      rofi.prompt.fg-color: "color: #282828;"
+      rofi.entry.fg-color: "color: #282828;"
+      rofi.entry.normal.alternate.fg-color: "color: #282828;"
+      rofi.element.normal.normal.fg-color: "color: #282828;"
+      rofi.element.normal.active.fg-color: "color: #282828;"
+      rofi.element.alternate.normal.fg-color: "color: #282828;"
+      rofi.element.selected.normal.bg-color: "background-color: #8ec07c;"
+      rofi.element.selected.normal.fg-color: "color: #3c3836;"
+      rofi.element.selected.active.bg-color: "background-color: #8ec07c;"
+      rofi.element.selected.active.fg-color: "color: #3c3836;"
+      tmux.bg: "'#a89984'"
+      tmux.fg: "'#3c3836'"
+      tmux.inactive: "'#b8bb26'"
+      tmux.active: "'#fb4934'"
+      tmux.side: "'#8ec07c'"
+      alacritty.theme: gruvbox_light
+      gtk3.theme.name: gruvbox-gtk
+      wallpaper.screen0: "{%_wallpapers_path_%}/gruvbox_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/gruvbox.png"
+      vim.bg.light_or_dark: light
+      vim.colorscheme: gruvbox
+  - name: ghdark
+    variables:
+      polybar.base-bar-bg: ${colors.ghdark-bg}
+      polybar.base-bar-fg: "foreground = ${colors.ghdark-lblue}"
+      polybar.ram.fg-0: ${colors.ghdark-lblue}
+      polybar.ram.fg-1: ${colors.ghdark-blue}
+      polybar.ram.fg-2: ${colors.ghdark-blue}
+      polybar.ram.fg-3: ${colors.ghdark-purp}
+      polybar.ram.fg-empty: ${colors.ghdark-grey}
+      polybar.volume.label-muted-fg: ${colors.ghdark-red}
+      polybar.datetime.fg: ${colors.ghdark-blue} 
+      polybar.bspwm.label-focused-underline: ${colors.ghdark-purple}
+      polybar.bspwm.label-focused-foreground: ${colors.ghdark-purple}
+      tmux.bg: "'#30353c'"
+      tmux.fg: "'#30353c'"
+      tmux.inactive: "'#a2d2fb'"
+      tmux.active: "'#cea5fb'"
+      tmux.side: "'#fa7970'"
+      rofi.common.bg-color: "#0d1117"
+      rofi.common.fg-color: "#ecf2f8"
+      rofi.common.border-color: "#2e343f"
+      rofi.prompt.fg-color: "color: #fa7970;"
+      rofi.entry.fg-color: "color: #ecf2f8;"
+      rofi.entry.normal.alternate.fg-color: "color: #ecf2f8;"
+      rofi.element.normal.normal.fg-color: "color: #a2d2fb;"
+      rofi.element.normal.normal.bg-color: "background-color: #0d1117;"
+      rofi.element.normal.active.fg-color: "color: #a2d2fb;"
+      rofi.element.normal.active.bg-color: "background-color: #0d1117;"
+      rofi.element.alternate.normal.fg-color: "color: #a2d2fb;"
+      rofi.element.alternate.normal.bg-color: "background-color: #0d1117;"
+      rofi.element.selected.normal.fg-color: "color: #21262d;"
+      rofi.element.selected.normal.bg-color: "background-color: #77bdfb;"
+      rofi.element.selected.active.fg-color: "color: #21262d;"
+      rofi.element.selected.active.bg-color: "background-color: #77bdfb;"
+      alacritty.theme: ghdark
+      gtk3.theme.name: Dracula
+      wallpaper.screen0: "{%_wallpapers_path_%}/ghdark_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/ghdark.png"
+      vim.colorscheme: ghdark
+  - name: bogster
+    variables:
+      polybar.base-bar-bg: ${colors.bogster-bg}
+      polybar.base-bar-fg: "foreground = ${colors.bogster-fg}"
+      polybar.ram.fg-0: ${colors.bogster-teal}
+      polybar.ram.fg-1: ${colors.bogster-teal}
+      polybar.ram.fg-2: ${colors.bogster-yellow}
+      polybar.ram.fg-3: ${colors.bogster-red}
+      polybar.ram.fg-empty: ${colors.bogster-grey}
+      polybar.volume.label-muted-fg: ${colors.bogster-red}
+      polybar.datetime.fg: ${colors.bogster-yellow} 
+      polybar.bspwm.label-focused-underline: ${colors.bogster-blue}
+      polybar.bspwm.label-focused-foreground: ${colors.bogster-blue}
+      _bg: "#161c23"
+      tmux.bg: "'#232d38'"
+      tmux.fg: "'#232d38'"
+      tmux.inactive: "'#dcb659'"
+      tmux.active: "'#dc597f'"
+      tmux.side: "'#59dcd8'"
+      rofi.common.bg-color: "{%_bg%}"
+      rofi.common.fg-color: "#e5ded6"
+      rofi.common.border-color: "#536984"
+      rofi.prompt.fg-color: "color: #dcb659;"
+      rofi.entry.bg-color: "background-color: {%_bg%};"
+      rofi.entry.fg-color: "color: #59dcb8;"
+      rofi.entry.normal.alternate.bg-color: "background-color: {%_bg%};"
+      rofi.entry.normal.alternate.fg-color: "color: #59dcb7;"
+      rofi.element.normal.normal.bg-color: "background-color: #232d38;"
+      rofi.element.normal.normal.fg-color: "color: #e5ded6;"
+      rofi.element.normal.active.bg-color: "background-color: #232d38;"
+      rofi.element.normal.active.fg-color: "color: #59dcb7;"
+      rofi.element.alternate.normal.bg-color: "background-color: #232d38;"
+      rofi.element.alternate.normal.fg-color: "color: #e5ded6;"
+      rofi.element.selected.normal.bg-color: "background-color: #59dcb7;"
+      rofi.element.selected.normal.fg-color: "color: #232d38;"
+      rofi.element.selected.active.bg-color: "background-color: #59dcb7;"
+      rofi.element.selected.active.fg-color: "color: #232d38;"
+      alacritty.theme: bogster
+      wallpaper.screen0: "{%_wallpapers_path_%}/bogster_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/bogster.png"
+      vim.colorscheme: bogster
+  - name: ayu
+    variables:
+      polybar.base-bar-bg: ${colors.ayu-bg}
+      polybar.base-bar-fg: "foreground = ${colors.ayu-blue}"
+      polybar.datetime.fg: ${colors.ayu-yellow} 
+      polybar.bspwm.label-focused-underline: ${colors.ayu-yellow}
+      polybar.bspwm.label-focused-foreground: ${colors.ayu-yellow}
+      tmux.bg: colour234
+      tmux.fg: colour234
+      tmux.inactive: colour31
+      tmux.active: colour221
+      tmux.side: colour166
+      alacritty.theme: ayu
+      wallpaper.screen0: "{%_wallpapers_path_%}/ghdark_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/ghdark.png"
+      vim.colorscheme: ayu
+  - name: nord
+    variables:
+      polybar.base-bar-bg: ${colors.nord-bg}
+      polybar.base-bar-fg: "foreground = ${colors.nord-cyan}"
+      polybar.ram.fg-0: ${colors.nord-green}
+      polybar.ram.fg-1: ${colors.nord-green}
+      polybar.ram.fg-2: ${colors.nord-yellow}
+      polybar.ram.fg-3: ${colors.nord-red}
+      polybar.ram.fg-empty: ${colors.nord-grey}
+      polybar.volume.label-muted-fg: ${colors.solar-red}
+      polybar.volume.label-muted-fg: ${colors.nord-red}
+      polybar.datetime.fg: ${colors.nord-cyan} 
+      polybar.bspwm.label-focused-underline: ${colors.nord-blue}
+      polybar.bspwm.label-focused-foreground: ${colors.nord-blue}
+      tmux.bg: "'#4c566a'"
+      tmux.fg: black
+      tmux.inactive: "'#88c0d0'"
+      tmux.active: "'#8fbcbb'"
+      tmux.side: "'#81a1c1'"
+      alacritty.theme: nord
+      wallpaper.screen0: "{%_wallpapers_path_%}/nord_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/nord.png"
+      vim.colorscheme: nord
+      rofi.common.bg-color: "#161920"
+      rofi.common.fg-color: "#8fbcbb"
+      rofi.prompt.fg-color: "color: #8fbcbb;"
+      _rofi_bg_color: "#2e3440"
+      _rofi_fg_color: "#d8dee9"
+      rofi.entry.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.entry.normal.alternate.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.normal.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.normal.normal.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.active.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.active.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.alternate.normal.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.alternate.normal.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.selected.normal.bg-color: "background-color: #4c515c;"
+      rofi.element.selected.normal.fg-color: "color: #d8dee9;"
+      rofi.element.selected.active.bg-color: "background-color: #4c515c;"
+      rofi.element.selected.active.fg-color: "color: #d8dee9;"
+  - name: solarized
+    variables:
+      polybar.base-bar-bg: ${colors.solar-bg}
+      polybar.base-bar-fg: "foreground = ${colors.solar-blue}"
+      polybar.ram.fg-0: ${colors.solar-green}
+      polybar.ram.fg-1: ${colors.solar-green}
+      polybar.ram.fg-2: ${colors.solar-yellow}
+      polybar.ram.fg-3: ${colors.solar-red}
+      polybar.volume.label-muted-fg: ${colors.solar-red}
+      polybar.datetime.fg: ${colors.solar-orange} 
+      polybar.bspwm.label-focused-underline: ${colors.solar-orange}
+      polybar.bspwm.label-focused-foreground: ${colors.solar-orange}
+      tmux.bg: black
+      tmux.fg: black
+      tmux.inactive: colour31
+      tmux.active: colour166
+      tmux.side: colour106
+      rofi.common.bg-color: "#002b36"
+      rofi.common.fg-color: "#839496"
+      rofi.common.border-color: "#586e75"
+      rofi.prompt.fg-color: "color: #cb4b16;"
+      _rofi_bg_color: "#002b36"
+      _rofi_fg_color: "#eee85d"
+      rofi.entry.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.entry.normal.alternate.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.normal.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.normal.normal.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.active.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.normal.active.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.alternate.normal.fg-color: "color: {%_rofi_fg_color%};"
+      rofi.element.alternate.normal.bg-color: "background-color: {%_rofi_bg_color%};"
+      rofi.element.selected.normal.bg-color: "background-color: #2aa198;"
+      rofi.element.selected.normal.fg-color: "color: #073642;"
+      rofi.element.selected.active.bg-color: "background-color: #2aa198;"
+      rofi.element.selected.active.fg-color: "color: #073642;"
+      alacritty.theme: solarized
+      gtk3.theme.name: Solarized-Dark-Orange
+      wallpaper.screen0: "{%_wallpapers_path_%}/solarized_vertical.png"
+      wallpaper.screen1: "{%_wallpapers_path_%}/solarized.png"
+      vim.colorscheme: solarized8

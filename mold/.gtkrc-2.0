@@ -1,0 +1,2 @@
+gtk-theme-name="{% gtk2.theme.name %}"
+gtk-font-name="{% gtk2.font.name %} {% gtk2.font.size %}"

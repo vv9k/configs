@@ -1,0 +1,79 @@
+configuration {
+    fullscreen: true;
+    show-icons: true;
+    font: "JetBrains Mono 16";
+    combi-modi: "window,run";
+    display-combi: "command";
+    display-run: ">>";
+    lines: 5;
+}
+
+* {
+  background-color: {% rofi.common.bg-color %};
+  border-color: {% rofi.common.border-color %};
+  color: {% rofi.common.fg-color %};
+  spacing: 0;
+  width: 768px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  children: [prompt,entry];
+  padding: 0 0 0 0;
+}
+
+prompt {
+  padding: 16px;
+  border: 0 1px 0 0;
+  {% rofi.prompt.fg-color %}
+}
+
+entry {
+  padding: 16px;
+  {% rofi.entry.fg-color %}
+  {% rofi.entry.bg-color %}
+}
+
+entry normal.alternate {
+  {% rofi.entry.normal.alternate.fg-color %}
+  {% rofi.entry.normal.alternate.bg-color %}
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  padding: 0 0 0 0;
+}
+
+element {
+  border: 0 0 1px 0;
+  padding: 15px;
+}
+
+element normal.normal {
+  {% rofi.element.normal.normal.fg-color %}
+  {% rofi.element.normal.normal.bg-color %}
+}
+
+element normal.active {
+  {% rofi.element.normal.active.fg-color %}
+  {% rofi.element.normal.active.bg-color %}
+}
+
+element alternate.normal {
+  {% rofi.element.alternate.normal.fg-color %}
+  {% rofi.element.alternate.normal.bg-color %}
+}
+
+
+element selected.normal {
+  {% rofi.element.selected.normal.fg-color %}
+  {% rofi.element.selected.normal.bg-color %}
+}
+
+element selected.active {
+  {% rofi.element.selected.active.fg-color %}
+  {% rofi.element.selected.active.bg-color %}
+}
+
