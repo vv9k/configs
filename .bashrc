@@ -27,7 +27,7 @@ alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool 
 #------------------------------------------------------------------------------#
 # Remote
 alias sshpi='ssh pivvo'
-alias work="ssh -Y wojtek@10.92.2.206"
+alias work="ssh -Y $(secret-tool lookup work remote-login)"
 alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
 #------------------------------------------------------------------------------#
