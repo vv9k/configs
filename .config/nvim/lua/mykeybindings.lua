@@ -1,8 +1,10 @@
+require "myfuncs"
+
 ------------------------------------------------------------------------------
 -- Smart tab
 ------------------------------------------------------------------------------
-vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.smart_tab()', {expr = true, noremap = true})
-vim.api.nvim_set_keymap('i', '<CR>', 'compe#confirm()', {expr = true, noremap = true})
+vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.SmartTab()', {expr = true, noremap = true})
+vim.api.nvim_set_keymap('i', '<S-Tab>', 'compe#confirm()', {expr = true, noremap = true})
 ------------------------------------------------------------------------------
 -- Tab navigation
 ------------------------------------------------------------------------------
@@ -46,8 +48,9 @@ vim.api.nvim_set_keymap('v', '<C-_>', '<leader>c<Space>', {})
 ------------------------------------------------------------------------------
 vim.api.nvim_set_keymap('n', '<Space>gp', '<ESC>:Git push', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>gc', '<ESC>:Git commit', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Space>ge', '<ESC>:Git commit --amend', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>gg', '<ESC>:Git commit .<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Space>ga', '<ESC>:Git commit --amend', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Space>ga', '<ESC>:Git add', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>gd', '<ESC>:Git diff<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>gs', '<ESC>:Git status<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Space>gl', '<ESC>:Git log<cr>', {noremap = true})
@@ -66,7 +69,7 @@ vim.api.nvim_set_keymap('n', '<F5>', ':source $MYVIMRC<cr>', {noremap = true})
 ------------------------------------------------------------------------------
 -- Display highlight groups under the cursor
 ------------------------------------------------------------------------------
-vim.api.nvim_set_keymap('n', '<F10>', ':lua syn_stack()<cr>:TSHighlightCapturesUnderCursor<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<F10>', ':lua SynStack()<cr>:TSHighlightCapturesUnderCursor<cr>', {noremap = true})
 ------------------------------------------------------------------------------
 -- Dividers
 ------------------------------------------------------------------------------

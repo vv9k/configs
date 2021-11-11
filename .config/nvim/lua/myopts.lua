@@ -1,13 +1,4 @@
-function nvim_create_augroups(definitions)
-  for group_name, definition in pairs(definitions) do
-    vim.api.nvim_command('augroup '..group_name)
-    for _, def in ipairs(definition) do
-      local command = table.concat(vim.tbl_flatten{'autocmd', def}, ' ')
-      vim.api.nvim_command(command)
-    end
-    vim.api.nvim_command('augroup END')
-  end
-end
+require "myfuncs"
 
 ------------------------------------------------------------------------------
 -- Shell
@@ -67,7 +58,7 @@ vim.cmd('filetype on')
 local augroups = {
   short_tab = {
     {'FileType', 'html', 'setlocal shiftwidth=2 expandtab'},
-    {'FileType', 'css', 'setlocal', 'shiftwidth=2 expandtab'},
+    {'FileType', 'css', 'setlocal shiftwidth=2 expandtab'},
     {'FileType', 'sailfish', 'setlocal shiftwidth=2 expandtab'},
     {'FileType', 'lua', 'setlocal shiftwidth=2 expandtab'},
   },
@@ -75,10 +66,13 @@ local augroups = {
   number_toggle = {
     {'BufEnter,FocusGained,InsertLeave', '*', ':set rnu'},
     {'BufLeave,FocusLost,InsertEnter', '*', ':set nornu'},
+  },
+  autoformat = {
+    {'BufWritePost *.py :lua FormatPython()'}
   }
 }
 
-nvim_create_augroups(augroups)
+CreateAugroups(augroups)
 ------------------------------------------------------------------------------
 -- Use system clipboard for yanks
 ------------------------------------------------------------------------------
