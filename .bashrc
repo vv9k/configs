@@ -46,6 +46,7 @@ alias update="paru && nvim -c 'PlugUpdate|q|q' && nvim -c 'CocUpdateSync|q|q'"
 alias reflect="sudo reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist"
 alias whatprovides="paru -Fy"
 alias cleanup="paru -Sc"
+alias cleanup_rs="rm -rf $HOME/dev/rust/*/target/* $HOME/dev/rust/*/*/target/*"
 alias night="redshift -l $(secret-tool lookup redshift location) &"
 alias tmux="tmux -u" # utf-8 support
 alias testvm="qemu-system-x86_64 -enable-kvm -cdrom ~/Downloads/archlinux-2021.05.01-x86_64.iso -boot order=d -drive file=~/test_arch,format=raw -m 6G -smp 6 -nic user,hostfwd=tcp::10022-:22"
