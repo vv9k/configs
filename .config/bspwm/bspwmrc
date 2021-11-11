@@ -1,8 +1,8 @@
 #! /bin/sh
 
 # xrandr
-#randr rotate
-randr
+randr rotate
+#randr
 
 bspc monitor HDMI-1 -d IV V VI
 bspc monitor DP-3 -d I II III
