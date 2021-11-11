@@ -8,7 +8,7 @@ font:
   italic:
     family: JetBrains Mono
     style: Italic
-  size: 9
+  size: 11
 schemes:
   ayu: &ayu
     primary:
