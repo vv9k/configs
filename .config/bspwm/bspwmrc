@@ -47,7 +47,7 @@ setxkbmap pl
 
 # Wallpaper
 pkill feh
-feh --bg-fill /home/wojtek/wallpapers/gruvbox_vertical.png --bg-fill /home/wojtek/wallpapers/gruvbox.png
+feh --bg-fill /home/wojtek/wallpapers/ghdark_vertical.png --bg-fill /home/wojtek/wallpapers/ghdark.png
 
 xset b off # Bell off
 xset s off # Screen Save off

@@ -246,7 +246,7 @@ schemes:
       magenta: '0x6c71c4'
       cyan:    '0x93a1a1'
       white:   '0xfdf6e3'
-colors: *gruvbox
+colors: *bogster
 window:
   padding:
     x: 10
