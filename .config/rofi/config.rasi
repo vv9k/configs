@@ -9,21 +9,9 @@ configuration {
 }
 
 * {
-/*background-color: #0d1117;/*ghdark*/*/
-/*border-color: #2e343f;/*ghdark*/*/
-/*color: #ecf2f8;/*ghdark*/*/
-/*background-color: #282c33;/*common*/*/
-/*border-color: #2e343f;/*common*/*/
-/*color: #8ca0aa;/*common*/*/
-/*background-color: #282828;/*gruvbox*/*/
-/*border-color: #928374;/*gruvbox*/*/
-/*color: #fbf1c7;/*gruvbox*/*/
-/*background-color: #002b36;/*solarized*/*/
-/*border-color: #586e75;/*solarized*/*/
-/*color: #839496;/*solarized*/*/
-  background-color: #161c23;/*bogster*/
-  border-color: #536984;/*bogster*/
-  color: #e5ded6;/*bogster*/
+  background-color: #161c23;
+  border-color: #536984;
+  color: #e5ded6;
   spacing: 0;
   width: 768px;
 }
@@ -37,27 +25,18 @@ inputbar {
 prompt {
   padding: 16px;
   border: 0 1px 0 0;
-/*color: #cb4b16;/*solarized*/*/
-/*color: #fa7970;/*ghdark*/*/
-  color: #dcb659;/*bogster*/
-/*color: #fb4934;/*gruvbox*/*/
+  color: #dcb659;
 }
 
 entry {
   padding: 16px;
-/*color: #eee8d5;/*solarized*/*/
-/*color: #ecf2f8;/*ghdark*/*/
-  background-color: #161c23;/*bogster*/
-  color: #59dcb7;/*bogster*/
-/*color: #b8bb26;/*gruvbox*/*/
+  color: #59dcb8;
+  background-color: #161c23;
 }
 
 entry normal.alternate {
-/*color: #eee8d5;/*solarized*/*/
-/*color: #ecf2f8;/*ghdark*/*/
-  background-color: #161c23;/*bogster*/
-  color: #59dcb7;/*bogster*/
-/*color: #b8bb26;/*gruvbox*/*/
+  color: #59dcb7;
+  background-color: #161c23;
 }
 
 listview {
@@ -73,48 +52,28 @@ element {
 }
 
 element normal.normal {
-/*color: #a2d2fb;/*ghdark*/*/
-  background-color: #232d38;/*bogster*/
-  color: #e5ded6;/*bogster*/
-/*color: #fbf1c7;/*gruvbox*/*/
+  color: #e5ded6;
+  background-color: #232d38;
 }
 
 element normal.active {
-/*color: #a2d2fb;/*ghdark*/*/
-  background-color: #232d38;/*bogster*/
-  color: #59dcb7;/*bogster*/
-/*color: #fbf1c7;/*gruvbox*/*/
+  color: #59dcb7;
+  background-color: #232d38;
 }
 
 element alternate.normal {
-/*color: #a2d2fb;/*ghdark*/*/
-  background-color: #232d38;/*bogster*/
-  color: #e5ded6;/*bogster*/
-/*color: #fbf1c7;/*gruvbox*/*/
+  color: #e5ded6;
+  background-color: #232d38;
 }
 
 
 element selected.normal {
-/*color: #3c3836;/*gruvbox*/*/
-/*color: #2e343f;/*common*/*/
-/*color: #073642;/*solarized*/*/
-/*color: #21262d;/*ghdark*/*/
-/*color: #77bdfb;/*ghdark*/*/
-  background-color: #59dcb7;/*bogster*/
-  color: #232d38;/*bogster*/
-/*background-color: #8ec07c;/*gruvbox*/*/
-/*background-color: #2aa198;/*solarized*/*/
+  color: #232d38;
+  background-color: #59dcb7;
 }
 
 element selected.active {
-/*color: #3c3836;/*gruvbox*/*/
-/*color: #2e343f;/*common*/*/
-/*color: #073642;/*solarized*/*/
-/*color: #21262d;/*ghdark*/*/
-/*color: #77bdfb;/*ghdark*/*/
-  background-color: #59dcb7;/*bogster*/
-  color: #232d38;/*bogster*/
-/*background-color: #8ec07c;/*gruvbox*/*/
-/*background-color: #2aa198;/*solarized*/*/
+  color: #232d38;
+  background-color: #59dcb7;
 }
 

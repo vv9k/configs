@@ -1,8 +1,7 @@
 #! /bin/sh
 
-# xrandr
+
 randr rotate
-#randr
 
 bspc monitor HDMI-1 -d IV V VI
 bspc monitor DP-3 -d I II III
@@ -47,7 +46,7 @@ setxkbmap pl
 
 # Wallpaper
 pkill feh
-feh --bg-fill /home/wojtek/wallpapers/ghdark_vertical.png --bg-fill /home/wojtek/wallpapers/ghdark.png
+feh --bg-fill /usr/share/wallpapers/bogster_vertical.png --bg-fill /usr/share/wallpapers/bogster.png
 
 xset b off # Bell off
 xset s off # Screen Save off
@@ -66,5 +65,5 @@ polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 dunst &
 
 # Nightshift
-pkill redshift
-redshift -P -l 52.13:21.0 &
+#pkill redshift
+#redshift -P -l 52.13:21.0 &
