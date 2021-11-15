@@ -12,30 +12,11 @@ THEMES=(
     "nord"
 )
 
-
-function render() {
-    local theme=$1
-    local inp=$2
-    local out=$3
-    echo "  $inp ~~> $out"
-    mold render -c context.yml -n $1 $2 $3
-}
-
 function enable_theme() {
     local theme=$1
     echo "Enabling theme $theme"
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    render $theme ./alacritty.yml ~/.config/alacritty/alacritty.yml
-    render $theme ./bspwm/bspwmrc ~/.config/bspwm/bspwmrc
-    render $theme ./.gtkrc-2.0 ~/.config/.gtkrc-2.0 
-    render $theme ./gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
-    render $theme ./.tmux.conf ~/.tmux.conf
-    render $theme ./polybar/colors.ini ~/.config/polybar/colors.ini
-    render $theme ./polybar/modules.ini ~/.config/polybar/modules.ini
-    render $theme ./polybar/config.ini ~/.config/polybar/config.ini
-    render $theme ./rofi/config.rasi ~/.config/rofi/config.rasi
-    render $theme ./lightdm/lightdm.conf /etc/configs/etc/lightdm/lightdm.conf
-    render $theme ./nvim/mycolors.lua ~/.config/nvim/lua/mycolors.lua
+    mold render-context context.yml -n $1
 }
 
 if [[ " ${THEMES[@]} " =~ " $THEME " ]]

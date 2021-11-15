@@ -1,3 +1,15 @@
+renders:
+  alacritty.yml: ~/.config/alacritty/alacritty.yml
+  bspwm/bspwmrc: ~/.config/bspwm/bspwmrc
+  .gtkrc-2.0: ~/.config/.gtkrc-2.0
+  gtk-3.0/settings.ini: ~/.config/gtk-3.0/settings.ini
+  .tmux.conf: ~/.tmux.conf
+  polybar/colors.ini: ~/.config/polybar/colors.ini
+  polybar/config.ini: ~/.config/polybar/config.ini
+  polybar/modules.ini: ~/.config/polybar/modules.ini
+  rofi/config.rasi: ~/.config/rofi/config.rasi
+  lightdm/lightdm.conf: /etc/configs/etc/lightdm/lightdm.conf
+  nvim/mycolors.lua: ~/.config/nvim/lua/mycolors.lua
 namespaces:
   - name: GLOBAL
     variables:
