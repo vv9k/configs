@@ -34,7 +34,7 @@ paq {'preservim/nerdcommenter'}
 paq {'vim-airline/vim-airline'}
 paq {'vim-airline/vim-airline-themes'}
 paq {'machakann/vim-highlightedyank'}
-paq {'scrooloose/nerdtree'}
+paq {'kyazdani42/nvim-tree.lua'}
 paq {'majutsushi/tagbar'}
 ------------------------------------------------------------------------------
 -- Syntactic language support
@@ -58,3 +58,6 @@ paq {'pearofducks/ansible-vim'}
 paq {'ibhagwan/fzf-lua'}
 paq {'vijaymarupudi/nvim-fzf'}
 paq {'kyazdani42/nvim-web-devicons'}
+
+
+require'nvim-tree'.setup{}
