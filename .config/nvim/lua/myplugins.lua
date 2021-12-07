@@ -30,9 +30,9 @@ paq {'preservim/nerdcommenter'}
 ------------------------------------------------------------------------------
 -- GUI enchancements
 ------------------------------------------------------------------------------
---paq {'itchyny/lightline.vim'}
-paq {'vim-airline/vim-airline'}
-paq {'vim-airline/vim-airline-themes'}
+paq {'nvim-lualine/lualine.nvim'}
+paq {'kyazdani42/nvim-web-devicons'}
+
 paq {'machakann/vim-highlightedyank'}
 paq {'kyazdani42/nvim-tree.lua'}
 paq {'majutsushi/tagbar'}
@@ -61,3 +61,4 @@ paq {'kyazdani42/nvim-web-devicons'}
 
 
 require'nvim-tree'.setup{}
+require'lualine'.setup{}
