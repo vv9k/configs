@@ -1,0 +1,17 @@
+{
+    "output_path": "/mnt/backup",
+    "devices": [
+        {
+            "name": "root",
+            "vol-group": "vgroot"
+        },
+        {
+            "name": "home",
+            "vol-group": "vgroot"
+        },
+        {
+            "name": "var",
+            "vol-group": "vgroot"
+        }
+    ]
+}
