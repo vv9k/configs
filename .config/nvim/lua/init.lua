@@ -6,8 +6,3 @@ require('mykeybindings')
 require('mycolors')
 
 
-require('nvim-treesitter.configs').setup {
-  highlight = {
-    enable = true,
-  }
-}
