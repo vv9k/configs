@@ -26,7 +26,7 @@ alias vim='nvim'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
 #------------------------------------------------------------------------------#
 # Remote
-alias sshpi='ssh pivvo'
+alias sshpi='ssh wojciech@pivvo'
 alias work="ssh -Y $(secret-tool lookup work remote-login)"
 alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
