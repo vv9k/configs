@@ -1,10 +1,10 @@
 #! /bin/sh
 
 
-randr rotate
+randr.py rotate
 
-bspc monitor HDMI-1 -d IV V VI
-bspc monitor DP-3 -d I II III
+bspc monitor 0x00400002 -d I II III
+bspc monitor 0x00400004 -d IV V VI
 
 
 bspc config border_width        1.5
@@ -47,7 +47,7 @@ setxkbmap pl
 
 # Wallpaper
 pkill feh
-feh --bg-fill /usr/share/wallpapers/bogster_vertical.png --bg-fill /usr/share/wallpapers/bogster.png
+feh --bg-fill /usr/share/wallpapers/bogster.png --bg-fill /usr/share/wallpapers/bogster.png
 
 xset b off # Bell off
 xset s off # Screen Save off
@@ -59,6 +59,7 @@ picom -b --experimental-backends
 
 # Top bar
 pkill polybar
+. /var/cache/monitors/env
 polybar --config=/home/wojtek/.config/polybar/config.ini top1 &
 polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 

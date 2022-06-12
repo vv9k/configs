@@ -61,6 +61,8 @@ alias scpecows="scp $(secret-tool lookup vps ecows)"
 export GOPATH="$HOME/go/"
 export CALIBRE_USE_DARK_PALETTE=1
 export EDITOR="nvim"
+export HDMI_MONITOR="$(cat /var/cache/hdmi_monitor_name || cat ~/.cache/hdmi_monitor_name || echo HDMI-1 2>/dev/null)"
+export DP_MONITOR="$(cat /var/cache/dp_monitor_name || cat ~/.cache/dp_monitor_name || echo DP-3 2>/dev/null)"
 
 # Fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
