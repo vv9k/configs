@@ -3,8 +3,8 @@
 
 {% bspwm.screen.init %}
 
-bspc monitor HDMI-1 -d IV V VI
-bspc monitor DP-3 -d I II III
+bspc monitor 0x00400002 -d I II III
+bspc monitor 0x00400004 -d IV V VI
 
 
 bspc config border_width        1.5
@@ -29,6 +29,7 @@ bspc rule -a firefox:Dialog desktop=^4 state=floating
 bspc rule -a firefox:Prompt desktop=^4 state=floating
 bspc rule -a firefox:Browser desktop=^4 state=floating
 bspc rule -a firefox:Firefox desktop=^4 state=floating
+bspc rule -a Brave-browser desktop=^4
 bspc rule -a Navigator desktop=^4 state=tiled
 bspc rule -a Alacritty desktop=^1 state=tiled
 bspc rule -a Chromium state=floating
@@ -58,6 +59,7 @@ picom -b --experimental-backends
 
 # Top bar
 pkill polybar
+. /var/cache/monitors/env
 polybar --config=/home/wojtek/.config/polybar/config.ini top1 &
 polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 

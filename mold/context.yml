@@ -31,7 +31,7 @@ namespaces:
       rofi.element.selected.active.fg-color: "color: #2e343f;"
 
       _font_: JetBrains Mono
-      _font_size_: '11'
+      _font_size_: '9'
 
       alacritty.font: "{%_font_%}"
       alacritty.font-size: "{%_font_size_%}"
@@ -45,8 +45,8 @@ namespaces:
       gtk2.font.name: "{%_font_%}"
       gtk2.font.size: "{%_font_size_%}"
 
-      #bspwm.screen.init: randr
-      bspwm.screen.init: randr rotate
+      #bspwm.screen.init: randr.py
+      bspwm.screen.init: randr.py rotate
 
       _wallpapers_path_: /usr/share/wallpapers
 

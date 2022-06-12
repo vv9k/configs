@@ -29,7 +29,7 @@ bspc rule -a firefox:Dialog desktop=^4 state=floating
 bspc rule -a firefox:Prompt desktop=^4 state=floating
 bspc rule -a firefox:Browser desktop=^4 state=floating
 bspc rule -a firefox:Firefox desktop=^4 state=floating
-bspc rule -a Brave-browser desktop=^4 state=floating
+bspc rule -a Brave-browser desktop=^4
 bspc rule -a Navigator desktop=^4 state=tiled
 bspc rule -a Alacritty desktop=^1 state=tiled
 bspc rule -a Chromium state=floating
@@ -47,7 +47,7 @@ setxkbmap pl
 
 # Wallpaper
 pkill feh
-feh --bg-fill /usr/share/wallpapers/bogster.png --bg-fill /usr/share/wallpapers/bogster.png
+feh --bg-fill /usr/share/wallpapers/bogster_vertical.png --bg-fill /usr/share/wallpapers/bogster.png
 
 xset b off # Bell off
 xset s off # Screen Save off
