@@ -3,17 +3,19 @@
 
 randr.py rotate
 
-bspc monitor 0x00400002 -d I II III
-bspc monitor 0x00400004 -d IV V VI
+. /var/cache/monitors/env
+
+bspc monitor $PRIMARY_DISPLAY -d I II III
+bspc monitor $SECONDARY_DISPLAY -d IV V VI
 
 
-bspc config border_width        1.5
-bspc config window_gap         	15
-bspc config split_ratio          0.5
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config border_width          1.5
+bspc config window_gap         	  15
+bspc config split_ratio           0.5
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
 bspc config focus_follows_pointer true
-bspc config top_padding 40
+bspc config top_padding           40
 
 
 ## color settings
@@ -59,7 +61,6 @@ picom -b --experimental-backends
 
 # Top bar
 pkill polybar
-. /var/cache/monitors/env
 polybar --config=/home/wojtek/.config/polybar/config.ini top1 &
 polybar --config=/home/wojtek/.config/polybar/config.ini top2 &
 
