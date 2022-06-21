@@ -9,6 +9,7 @@ renders:
   polybar/modules.ini: ~/.config/polybar/modules.ini
   rofi/config.rasi: ~/.config/rofi/config.rasi
   lightdm/lightdm.conf: /etc/configs/etc/lightdm/lightdm.conf
+  lightdm/lightdm-gtk-greeter.conf: /etc/configs/etc/lightdm/lightdm-gtk-greeter.conf
   nvim/mycolors.lua: ~/.config/nvim/lua/mycolors.lua
 namespaces:
   - name: GLOBAL
