@@ -1,7 +1,7 @@
 #! /bin/sh
 
 
-randr.py rotate
+/usr/local/scripts/randr.py rotate
 
 . /var/cache/monitors/env
 
@@ -10,7 +10,7 @@ bspc monitor $SECONDARY_DISPLAY -d IV V VI
 
 
 bspc config border_width          1.5
-bspc config window_gap         	  15
+bspc config window_gap            15
 bspc config split_ratio           0.5
 bspc config borderless_monocle    true
 bspc config gapless_monocle       true
