@@ -31,7 +31,7 @@ namespaces:
       rofi.element.selected.normal.fg-color: "color: #2e343f;"
       rofi.element.selected.active.fg-color: "color: #2e343f;"
 
-      _font_: JetBrains Mono
+      _font_: Fira Code
       _font_size_: '9'
 
       alacritty.font: "{%_font_%}"
@@ -46,12 +46,16 @@ namespaces:
       gtk2.font.name: "{%_font_%}"
       gtk2.font.size: "{%_font_size_%}"
 
-      #bspwm.screen.init: randr.py
-      bspwm.screen.init: randr.py rotate
+      #screen.init.script: /usr/local/scripts/randr.py
+      screen.init.script: /usr/local/scripts/randr.py rotate
+      bspwm.screen.init: "{%screen.init.script%}"
 
       _wallpapers_path_: /usr/share/wallpapers
 
       vim.bg.light_or_dark: dark
+
+      screen0: "{@~ /var/cache/monitors/primary_display ~@}"
+      screen1: "{@~ /var/cache/monitors/secondary_display ~@}"
 
   - name: gruvbox
     variables:
