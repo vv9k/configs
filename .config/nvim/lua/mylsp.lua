@@ -8,10 +8,10 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
-  'zls'
+  'zls',
 }
 
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
@@ -31,7 +31,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl',
+    '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
@@ -44,7 +45,7 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     capabilities = lsp_status.capabilities
   }
-  
+
 end
 
 ------------------------------------------------------------------------------
@@ -63,17 +64,17 @@ local sumneko_root_path = "/usr/lib/lua-language-server"
 nvim_lsp['sumneko_lua'].setup {
   on_attach = on_attach,
   capabilities = lsp_status.capabilities,
-  cmd = {sumneko_binary_path, '-E', sumneko_root_path .. '/main.lua'},
+  cmd = { sumneko_binary_path, '-E', sumneko_root_path .. '/main.lua' },
   settings = {
     Lua = {
       diagnostics = {
-          globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
-          library = vim.api.nvim_get_runtime_file("", true),
+        library = vim.api.nvim_get_runtime_file("", true),
       },
       telemetry = {
-          enable = false,
+        enable = false,
       },
     },
   },
@@ -106,3 +107,6 @@ compe.setup {
   };
 }
 
+
+-- Autoformat
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
