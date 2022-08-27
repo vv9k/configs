@@ -1,67 +1,69 @@
-require 'paq' {
-------------------------------------------------------------------------------
--- Git helper
-------------------------------------------------------------------------------
-    'tpope/vim-fugitive';
-------------------------------------------------------------------------------
--- Colorschemes
-------------------------------------------------------------------------------
-    'gruvbox-community/gruvbox';
-    'lifepillar/vim-solarized8';
-    'ayu-theme/ayu-vim';
-    'arcticicestudio/nord-vim';
-    'wojciechkepka/vim-github-dark';
-    'wojciechkepka/bogster';
-    'joshdick/onedark.vim';
-    'projekt0n/github-nvim-theme';
-    'EdenEast/nightfox.nvim';
-------------------------------------------------------------------------------
--- LSP
-------------------------------------------------------------------------------
-    'neovim/nvim-lspconfig';
-    'nvim-lua/lsp-status.nvim';
-------------------------------------------------------------------------------
--- Completion
-------------------------------------------------------------------------------
-    'hrsh7th/nvim-compe';
-------------------------------------------------------------------------------
--- Auto comments
-------------------------------------------------------------------------------
-    'preservim/nerdcommenter';
-------------------------------------------------------------------------------
--- GUI enchancements
-------------------------------------------------------------------------------
-    'nvim-lualine/lualine.nvim';
-    'kyazdani42/nvim-web-devicons';
+require 'packer'.startup(function(use)
+  use 'wbthomason/packer.nvim'
+  ------------------------------------------------------------------------------
+  -- Git helper
+  ------------------------------------------------------------------------------
+  use 'tpope/vim-fugitive'
+  ------------------------------------------------------------------------------
+  -- Colorschemes
+  ------------------------------------------------------------------------------
+  use 'gruvbox-community/gruvbox'
+  use 'lifepillar/vim-solarized8'
+  use 'ayu-theme/ayu-vim'
+  use 'arcticicestudio/nord-vim'
+  use 'wojciechkepka/vim-github-dark'
+  use 'wojciechkepka/bogster'
+  use 'joshdick/onedark.vim'
+  use 'projekt0n/github-nvim-theme'
+  use 'EdenEast/nightfox.nvim'
+  ------------------------------------------------------------------------------
+  -- LSP
+  ------------------------------------------------------------------------------
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/lsp-status.nvim'
+  use { '/home/wojtek/dev/jakt/jakt-src/editors/vim', as = 'Jakt' }
+  ------------------------------------------------------------------------------
+  -- Completion
+  ------------------------------------------------------------------------------
+  use 'hrsh7th/nvim-compe'
+  ------------------------------------------------------------------------------
+  -- Auto comments
+  ------------------------------------------------------------------------------
+  use 'preservim/nerdcommenter'
+  ------------------------------------------------------------------------------
+  -- GUI enchancements
+  ------------------------------------------------------------------------------
+  use 'nvim-lualine/lualine.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
-    'machakann/vim-highlightedyank';
-    'kyazdani42/nvim-tree.lua';
-    'majutsushi/tagbar';
-------------------------------------------------------------------------------
--- Syntactic language support
-------------------------------------------------------------------------------
-    'cespare/vim-toml';
-    'stephpy/vim-yaml';
-    'rust-lang/rust.vim';
-    'OmniSharp/omnisharp-vim';
-    'baskerville/vim-sxhkdrc';
-    'fatih/vim-go';
-    'cakebaker/scss-syntax.vim';
-    'vim-python/python-syntax';
-    'pangloss/vim-javascript';
-    'lervag/vimtex';
-    'pearofducks/ansible-vim';
-    'mustache/vim-mustache-handlebars';
-    'ziglang/zig.vim';
-------------------------------------------------------------------------------
--- File search
-------------------------------------------------------------------------------
-    'ibhagwan/fzf-lua';
-    'vijaymarupudi/nvim-fzf';
-    'kyazdani42/nvim-web-devicons';
-}
+  use 'machakann/vim-highlightedyank'
+  use 'kyazdani42/nvim-tree.lua'
+  use 'majutsushi/tagbar'
+  ------------------------------------------------------------------------------
+  -- Syntactic language support
+  ------------------------------------------------------------------------------
+  use 'cespare/vim-toml'
+  use 'stephpy/vim-yaml'
+  use 'rust-lang/rust.vim'
+  use 'OmniSharp/omnisharp-vim'
+  use 'baskerville/vim-sxhkdrc'
+  use 'fatih/vim-go'
+  use 'cakebaker/scss-syntax.vim'
+  use 'vim-python/python-syntax'
+  use 'pangloss/vim-javascript'
+  use 'lervag/vimtex'
+  use 'pearofducks/ansible-vim'
+  use 'mustache/vim-mustache-handlebars'
+  use 'zilang/zig.vim';
+  ------------------------------------------------------------------------------
+  -- File search
+  ------------------------------------------------------------------------------
+  use 'ibhagwan/fzf-lua'
+  use 'vijaymarupudi/nvim-fzf'
+  use 'kyazdani42/nvim-web-devicons'
+end)
 
 
 
-require'nvim-tree'.setup{}
-require'lualine'.setup{}
+require 'nvim-tree'.setup {}
+require 'lualine'.setup {}
