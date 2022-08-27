@@ -26,7 +26,7 @@ alias vim='nvim'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
 #------------------------------------------------------------------------------#
 # Remote
-alias sshpi='ssh wojciech@pivvo'
+alias sshpi="ssh -p $(secret-tool lookup pivvo ssh-port) wojciech@pivvo"
 alias work="ssh -Y $(secret-tool lookup work remote-login)"
 alias vpn="sudo openvpn $HOME/vpn/work.ovpn"
 alias vps="ssh $(secret-tool lookup vps login)@$(secret-tool lookup vps ip) -p $(secret-tool lookup vps port) -i $(secret-tool lookup vps idfile)"
@@ -58,7 +58,7 @@ alias scpecows="scp $(secret-tool lookup vps ecows)"
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other ~~~~~
 ################################################################################
-export GOPATH="$HOME/go/"
+export GOPATH="$HOME/dev/go/"
 export CALIBRE_USE_DARK_PALETTE=1
 export EDITOR="nvim"
 export HDMI_MONITOR="$(cat /var/cache/hdmi_monitor_name || cat ~/.cache/hdmi_monitor_name || echo HDMI-1 2>/dev/null)"
