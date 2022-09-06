@@ -31,7 +31,7 @@ namespaces:
       rofi.element.selected.normal.fg-color: "color: #2e343f;"
       rofi.element.selected.active.fg-color: "color: #2e343f;"
 
-      _font_: Fira Code
+      _font_: JetBrains Mono
       _font_size_: '9'
 
       alacritty.font: "{%_font_%}"
@@ -46,8 +46,8 @@ namespaces:
       gtk2.font.name: "{%_font_%}"
       gtk2.font.size: "{%_font_size_%}"
 
-      #screen.init.script: /usr/local/scripts/randr
-      screen.init.script: /usr/local/scripts/randr rotate
+      screen.init.script: /usr/local/scripts/randr
+      #screen.init.script: /usr/local/scripts/randr rotate
       bspwm.screen.init: "{%screen.init.script%}"
 
       _wallpapers_path_: /usr/share/wallpapers
