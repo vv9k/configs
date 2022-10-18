@@ -12,8 +12,10 @@ configuration {
   background-color: #161c23;
   border-color: #536984;
   color: #e5ded6;
+  border: 0 0 0 0;
   spacing: 0;
   width: 768px;
+  border-radius: 15px;
 }
 
 inputbar {
