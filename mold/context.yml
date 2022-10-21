@@ -46,8 +46,8 @@ namespaces:
       gtk2.font.name: "{%_font_%}"
       gtk2.font.size: "{%_font_size_%}"
 
-      screen.init.script: /usr/local/scripts/randr
-      #screen.init.script: /usr/local/scripts/randr rotate
+      #screen.init.script: /usr/local/scripts/randr
+      screen.init.script: /usr/local/scripts/randr rotate
       bspwm.screen.init: "{%screen.init.script%}"
 
       _wallpapers_path_: /usr/share/wallpapers
