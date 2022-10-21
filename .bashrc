@@ -22,6 +22,7 @@ export BAT_THEME="gruvbox-dark"
 # Apps
 alias cat='bat'
 alias ls='exa --icons'
+alias hx='helix'
 alias vim='nvim'
 alias spotify="spotifyd -u $(secret-tool lookup spotifyd login) -P 'secret-tool lookup spotifyd pass' --backend pulseaudio"
 #------------------------------------------------------------------------------#
